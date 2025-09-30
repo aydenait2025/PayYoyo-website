@@ -22,7 +22,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              The world's first truly autonomous gift card payment system, powered by AI-driven GPS intelligence and financial optimization.
+              The world&apos;s first truly autonomous gift card payment system, powered by AI-driven GPS intelligence and financial optimization.
             </motion.p>
           </div>
 

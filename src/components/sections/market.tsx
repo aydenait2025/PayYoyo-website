@@ -101,7 +101,7 @@ export function Market() {
               A $364B Market Waiting for Disruption
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
+              We&apos;re targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
             </p>
           </motion.div>
         </div>

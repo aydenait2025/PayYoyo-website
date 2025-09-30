@@ -23,7 +23,7 @@ export function Contact() {
               Join the Future of Payments
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Be part of the autonomous payment revolution. Connect with our investment team to learn more about PayBubu's groundbreaking technology and funding opportunities.
+              Be part of the autonomous payment revolution. Connect with our investment team to learn more about PayBubu&apos;s groundbreaking technology and funding opportunities.
             </p>
           </motion.div>
         </div>
@@ -93,7 +93,7 @@ export function Contact() {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Investment Opportunity Summary</h3>
-            <p className="text-gray-600">We're seeking strategic investors for our Series A round</p>
+            <p className="text-gray-600">We&apos;re seeking strategic investors for our Series A round</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -140,7 +140,7 @@ export function Contact() {
         >
           <h3 className="text-3xl font-bold mb-6">The Time is Now</h3>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-            PayBubu represents the future of autonomous payments. With our first-mover advantage in AI-powered financial optimization, we're positioned to capture the $364B global gift card market.
+            PayBubu represents the future of autonomous payments. With our first-mover advantage in AI-powered financial optimization, we are positioned to capture the $364B global gift card market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" className="px-8 py-4">

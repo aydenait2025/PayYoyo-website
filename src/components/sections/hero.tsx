@@ -26,7 +26,7 @@ export function Hero() {
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              The World's First
+              The World First
               <span className="block text-[#1E40AF]">Truly Autonomous</span>
               Payment System
             </h1>

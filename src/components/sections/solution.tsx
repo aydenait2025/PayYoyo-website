@@ -376,7 +376,7 @@ export function Solution() {
               <div className="space-y-6 max-w-4xl mx-auto">
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    How does Paybubu's AI payment automation work?
+                    How does Paybubu&apos;s AI payment automation work?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
@@ -398,7 +398,7 @@ export function Solution() {
 
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    How secure is Paybubu's autonomous payment system?
+                    How secure is Paybubu&apos;s autonomous payment system?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
@@ -413,7 +413,7 @@ export function Solution() {
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Paybubu is currently in private beta testing with select partners. Join our waiting list to receive early access notifications and be among the first to experience autonomous payment automation. We're working diligently to ensure enterprise-grade reliability before public launch.
+                      Paybubu is currently in private beta testing with select partners. Join our waiting list to receive early access notifications and be among the first to experience autonomous payment automation. We are working diligently to ensure enterprise-grade reliability before public launch.
                     </div>
                   </div>
                 </div>
