@@ -13,28 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Paybubu - AI-Powered Autonomous Payment Platform | Revolutionize Gift Card Payments",
-  description: "Transform your payment experience with Paybubu's AI-driven automation. GPS-triggered intelligence analyzes your gift cards and executes optimal payments automatically. Join the future of frictionless commerce.",
+  title: "PayYoYo - AI-Powered Autonomous Payment Platform | Revolutionize Gift Card Payments",
+  description: "Transform your payment experience with PayYoyo Wallet's AI-driven automation. GPS-triggered intelligence analyzes your gift cards and executes optimal payments automatically. Join the future of frictionless commerce.",
   keywords: "AI payment automation, autonomous payments, gift card optimization, GPS payment, machine learning payments, contactless payment, financial technology, fintech innovation",
-  authors: [{ name: "Paybubu Team" }],
-  creator: "Paybubu",
-  publisher: "Paybubu",
+  authors: [{ name: "PayYoyo Wallet Team" }],
+  creator: "PayYoyo Wallet",
+  publisher: "PayYoyo Wallet",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "Paybubu - AI-Powered Autonomous Payment Platform",
+    title: "PayYoYo - AI-Powered Autonomous Payment Platform",
     description: "Revolutionary AI-driven payment automation that eliminates payment friction forever. GPS-triggered intelligence optimizes gift card payments automatically.",
-    url: "https://paybubu.com",
-    siteName: "Paybubu",
+    url: "https://PayYoYo.com",
+    siteName: "PayYoYo",
     images: [
       {
-        url: "https://paybubu.com/images/og-image.jpg",
+        url: "https://PayYoyo Wallet.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Paybubu AI Payment Automation Platform",
+        alt: "PayYoyo Wallet AI Payment Automation Platform",
       },
     ],
     locale: "en_US",
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Paybubu - AI-Powered Autonomous Payment Platform",
+    title: "PayYoyo Wallet - AI-Powered Autonomous Payment Platform",
     description: "Revolutionary AI-driven payment automation that eliminates payment friction forever. GPS-triggered intelligence optimizes gift card payments automatically.",
-    creator: "@paybubu",
-    images: ["https://paybubu.com/images/twitter-card.jpg"],
+    creator: "@PayYoyo Wallet",
+    images: ["https://PayYoyo Wallet.com/images/twitter-card.jpg"],
   },
   robots: {
     index: true,

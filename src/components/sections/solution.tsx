@@ -128,7 +128,7 @@ export function Solution() {
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Paybubu",
+    "name": "PayYoyo Wallet",
     "applicationCategory": "FinancialApplication",
     "operatingSystem": "Web Browser",
     "offers": {
@@ -138,11 +138,11 @@ export function Solution() {
       "description": "Free to use autonomous payment platform"
     },
     "description": "AI-powered autonomous payment platform that eliminates payment friction through GPS intelligence and machine learning optimization for gift card payments.",
-    "url": "https://paybubu.com",
+    "url": "https://PayYoyo Wallet.com",
     "creator": {
       "@type": "Organization",
-      "name": "Paybubu",
-      "url": "https://paybubu.com",
+      "name": "PayYoyo Wallet",
+      "url": "https://PayYoyo Wallet.com",
       "description": "Revolutionary AI-powered payment automation platform"
     },
     "featureList": [
@@ -151,7 +151,7 @@ export function Solution() {
       "Zero user input required",
       "Bank-level security (PCI DSS Level 1)"
     ],
-    "screenshot": "https://paybubu.com/images/screenshot.png"
+    "screenshot": "https://PayYoyo Wallet.com/images/screenshot.png"
   };
 
   // Breadcrumb navigation schema
@@ -163,13 +163,13 @@ export function Solution() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://paybubu.com"
+        "item": "https://PayYoyo Wallet.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Solution",
-        "item": "https://paybubu.com#solution"
+        "item": "https://PayYoyo Wallet.com#solution"
       }
     ]
   };
@@ -193,7 +193,7 @@ export function Solution() {
         itemType="https://schema.org/Service"
       >
         <meta itemProp="name" content="AI-Powered Autonomous Payment Solution" />
-        <meta itemProp="description" content="Experience revolutionary payment automation with Paybubu's GPS-triggered AI intelligence that analyzes and optimizes gift card payments automatically." />
+        <meta itemProp="description" content="Experience revolutionary payment automation with PayYoyo Wallet's GPS-triggered AI intelligence that analyzes and optimizes gift card payments automatically." />
         <meta itemProp="areaServed" content="Global" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -213,7 +213,7 @@ export function Solution() {
                 Autonomous Payments, Finally Here
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Paybubu eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value.
+                PayYoyo Wallet eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value.
               </p>
             </motion.div>
           </header>
@@ -226,7 +226,7 @@ export function Solution() {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">How Paybubu Works</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">How PayYoyo Wallet Works</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">Seamless automation in three simple steps</p>
           </motion.div>
 
@@ -335,7 +335,7 @@ export function Solution() {
                 <div className="w-8 h-8 bg-[#10B981]/10 rounded-full flex items-center justify-center mr-3">
                   <span className="text-[#10B981] text-sm font-bold">✓</span>
                 </div>
-                <h4 className="font-semibold text-gray-900">Paybubu Automation</h4>
+                <h4 className="font-semibold text-gray-900">PayYoyo Wallet Automation</h4>
               </div>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-center">
@@ -370,50 +370,50 @@ export function Solution() {
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
                 Frequently Asked Questions
               </h2>
-              <meta itemProp="name" content="Paybubu AI Payment Automation FAQs" />
+              <meta itemProp="name" content="PayYoyo Wallet AI Payment Automation FAQs" />
               <meta itemProp="description" content="Answers to common questions about AI-powered autonomous payments, GPS-triggered automation, and gift card optimization." />
 
               <div className="space-y-6 max-w-4xl mx-auto">
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    How does Paybubu&apos;s AI payment automation work?
+                    How does PayYoyo Wallet&apos;s AI payment automation work?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Paybubu uses GPS location detection to trigger automatic analysis of your gift card portfolio when you arrive within 10 meters of participating merchants. Our machine learning algorithms instantly determine optimal card combinations to maximize value while minimizing waste, requiring only one-click confirmation for payment execution.
+                      PayYoyo Wallet uses GPS location detection to trigger automatic analysis of your gift card portfolio when you arrive within 10 meters of participating merchants. Our machine learning algorithms instantly determine optimal card combinations to maximize value while minimizing waste, requiring only one-click confirmation for payment execution.
                     </div>
                   </div>
                 </div>
 
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    What makes Paybubu different from other payment apps?
+                    What makes PayYoyo Wallet different from other payment apps?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Unlike traditional payment apps that require manual searching and selection, Paybubu eliminates all user input through AI-driven automation. GPS-triggered intelligence analyzes your entire gift card portfolio in real-time, selecting optimal combinations automatically while providing bank-level security through PCI DSS Level 1 compliance.
+                      Unlike traditional payment apps that require manual searching and selection, PayYoyo Wallet eliminates all user input through AI-driven automation. GPS-triggered intelligence analyzes your entire gift card portfolio in real-time, selecting optimal combinations automatically while providing bank-level security through PCI DSS Level 1 compliance.
                     </div>
                   </div>
                 </div>
 
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    How secure is Paybubu&apos;s autonomous payment system?
+                    How secure is PayYoyo Wallet&apos;s autonomous payment system?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Paybubu implements bank-level security with PCI DSS Level 1 compliance, end-to-end encryption, and Hardware Security Module (HSM) key management. All financial data is protected with enterprise-grade encryption, ensuring your gift card information and transactions remain completely secure during automated processing.
+                      PayYoyo Wallet implements bank-level security with PCI DSS Level 1 compliance, end-to-end encryption, and Hardware Security Module (HSM) key management. All financial data is protected with enterprise-grade encryption, ensuring your gift card information and transactions remain completely secure during automated processing.
                     </div>
                   </div>
                 </div>
 
                 <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
                   <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    When will Paybubu be available for public use?
+                    When will PayYoyo Wallet be available for public use?
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Paybubu is currently in private beta testing with select partners. Join our waiting list to receive early access notifications and be among the first to experience autonomous payment automation. We are working diligently to ensure enterprise-grade reliability before public launch.
+                      PayYoyo Wallet is currently in private beta testing with select partners. Join our waiting list to receive early access notifications and be among the first to experience autonomous payment automation. We are working diligently to ensure enterprise-grade reliability before public launch.
                     </div>
                   </div>
                 </div>

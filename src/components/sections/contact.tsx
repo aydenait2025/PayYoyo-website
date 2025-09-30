@@ -1,9 +1,59 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Modal } from '@/components/ui/modal';
+import { SignupForm } from '@/components/ui/signup-form';
 
 export function Contact() {
+  const [showSignupModal, setShowSignupModal] = useState(false);
+
+  const closeModal = () => {
+    setShowSignupModal(false);
+  };
+
+  const handleScheduleMeeting = () => {
+    // Open Calendly scheduling service
+    const calendlyUrl = 'https://calendly.com/aydenait2025';
+
+    // Alternative: Use Calendly's popup instead of new tab
+    // if (window.Calendly) {
+    //   window.Calendly.initPopupWidget({ url: calendlyUrl });
+    // } else {
+    //   window.open(calendlyUrl, '_blank');
+    // }
+
+    window.open(calendlyUrl, '_blank');
+  };
+
+  const handleDownloadDeck = () => {
+    // Open the investment deck
+    window.open('/investment-deck-outline.html', '_blank');
+  };
+
+  const handleEmailUs = () => {
+    const email = 'investors@PayYoyoWallet.com';
+    const subject = 'Investment Inquiry - Investors Deck Request';
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+
+    // Try using window.open first, then fallback to window.location.href
+    try {
+      window.open(mailtoLink, '_self');
+    } catch (error) {
+      // Fallback for some browsers that block window.open with mailto
+      window.location.href = mailtoLink;
+    }
+  };
+
+  const handleScheduleInvestmentMeeting = () => {
+    setShowSignupModal(true);
+  };
+
+  const handleDownloadPitchDeck = () => {
+    handleDownloadDeck(); // Reuse the same logic
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +73,7 @@ export function Contact() {
               Join the Future of Payments
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Be part of the autonomous payment revolution. Connect with our investment team to learn more about PayBubu&apos;s groundbreaking technology and funding opportunities.
+              Be part of the autonomous payment revolution. Connect with our investment team to learn more about PayYoyo Wallet&apos;s groundbreaking technology and funding opportunities.
             </p>
           </motion.div>
         </div>
@@ -77,7 +127,15 @@ export function Contact() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">{option.title}</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">{option.description}</p>
-              <Button variant={option.primary ? "primary" : "outline"} className="w-full">
+              <Button
+                variant={option.primary ? "primary" : "outline"}
+                className="w-full"
+                onClick={
+                  option.title === 'Schedule a Call' ? handleScheduleMeeting :
+                  option.title === 'Investment Deck' ? handleDownloadDeck :
+                  handleEmailUs
+                }
+              >
                 {option.action}
               </Button>
             </motion.div>
@@ -140,16 +198,17 @@ export function Contact() {
         >
           <h3 className="text-3xl font-bold mb-6">The Time is Now</h3>
           <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-            PayBubu represents the future of autonomous payments. With our first-mover advantage in AI-powered financial optimization, we are positioned to capture the $364B global gift card market.
+            PayYoyo Wallet represents the future of autonomous payments. With our first-mover advantage in AI-powered financial optimization, we are positioned to capture the $364B global gift card market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="px-8 py-4">
+            <Button variant="secondary" size="lg" className="px-8 py-4" onClick={handleScheduleInvestmentMeeting}>
               Schedule Investment Meeting
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="px-8 py-4 bg-transparent border-white text-white hover:bg-white hover:text-[#1E40AF]"
+              onClick={handleDownloadPitchDeck}
             >
               Download Pitch Deck
             </Button>
@@ -159,6 +218,10 @@ export function Contact() {
           </p>
         </motion.div>
       </div>
+
+      <Modal isOpen={showSignupModal} onClose={closeModal}>
+        <SignupForm onClose={closeModal} />
+      </Modal>
     </section>
   );
 }

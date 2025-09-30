@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { Button } from './ui/button';
+import { Logo } from './ui/logo';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,9 +19,15 @@ export function Navbar() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're on the home page, scroll to section
+    if (window.location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If we're on a different page (like careers), navigate to home page with anchor
+      window.location.href = `/#${sectionId}`;
     }
   };
 
@@ -36,9 +44,9 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold text-[#1E40AF]">
-              Paybubu
-            </a>
+            <Link href="/" className="flex">
+              <Logo />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -51,13 +59,23 @@ export function Navbar() {
                 { name: 'Advantage', id: 'market' },
                 { name: 'Contact', id: 'contact' },
               ].map((item) => (
-                <button
+                <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-[#1E40AF] px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  className="relative text-gray-700 hover:text-[#1E40AF] px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out overflow-hidden group"
+                  whileHover={{
+                    scale: 1.05,
+                    y: -2,
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
                 >
-                  {item.name}
-                </button>
+                  <span className="relative z-10">{item.name}</span>
+                  {/* Animated underline */}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] transition-all duration-300 group-hover:w-full"></span>
+                  {/* Background hover effect */}
+                  <span className="absolute inset-0 bg-gradient-to-r from-[#F3F4F6] to-[#E5E7EB] opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-0 group-hover:scale-100 rounded-md"></span>
+                </motion.button>
               ))}
             </div>
           </div>

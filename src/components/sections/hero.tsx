@@ -1,9 +1,29 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Modal } from '@/components/ui/modal';
+import { SignupForm } from '@/components/ui/signup-form';
+import { VideoDemo } from '@/components/ui/video-demo';
 
 export function Hero() {
+  const [showSignupModal, setShowSignupModal] = useState(false);
+  const [showVideoModal, setShowVideoModal] = useState(false);
+
+  const handleGetEarlyAccess = () => {
+    setShowSignupModal(true);
+  };
+
+  const handleWatchDemo = () => {
+    setShowVideoModal(true);
+  };
+
+  const closeModals = () => {
+    setShowSignupModal(false);
+    setShowVideoModal(false);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
       {/* Background Pattern */}
@@ -40,7 +60,7 @@ export function Hero() {
             className="mb-8"
           >
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Paybubu eliminates gift card waste forever through AI-driven GPS intelligence and autonomous financial optimization. Never forget, mismanage, or lose your gift cards again.
+              PayYoyo Wallet eliminates gift card waste forever through AI-driven GPS intelligence and autonomous financial optimization. Never forget, mismanage, or lose your gift cards again.
             </p>
           </motion.div>
 
@@ -73,10 +93,10 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <Button size="lg" className="px-8 py-4 text-lg">
+            <Button size="lg" className="px-8 py-4 text-lg" onClick={handleGetEarlyAccess}>
               Get Early Access
             </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+            <Button variant="outline" size="lg" className="px-8 py-4 text-lg" onClick={handleWatchDemo}>
               Watch Demo
             </Button>
           </motion.div>
@@ -114,6 +134,15 @@ export function Hero() {
           />
         </div>
       </motion.div>
+
+      {/* Modals */}
+      <Modal isOpen={showSignupModal} onClose={closeModals}>
+        <SignupForm onClose={closeModals} />
+      </Modal>
+
+      <Modal isOpen={showVideoModal} onClose={closeModals}>
+        <VideoDemo onClose={closeModals} />
+      </Modal>
     </section>
   );
 }
