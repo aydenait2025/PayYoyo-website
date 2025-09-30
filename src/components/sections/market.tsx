@@ -171,7 +171,7 @@ export function Market() {
                 <div className="text-2xl font-bold text-[#1E40AF] mb-4">{year.year}</div>
                 <div className="space-y-3">
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">${year.mrr}</div>
+                    <div className="text-2xl font-bold text-gray-900">{year.mrr}</div>
                     <div className="text-sm text-gray-600">Monthly Recurring Revenue</div>
                   </div>
                   <div>
