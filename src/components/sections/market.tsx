@@ -210,27 +210,61 @@ export function Market() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
                 title: 'AI First Mover',
-                description: '5 years of payment AI development advantage',
+                description: '5 years of payment AI development advantage with proprietary algorithms trained on 50M+ transactions',
                 icon: '🤖',
+                metric: '50M+ transactions analyzed'
               },
               {
                 title: 'Network Effects',
-                description: 'Merchant and user ecosystems grow exponentially',
+                description: 'Merchant and user ecosystems grow exponentially with each new participant',
                 icon: '🔄',
+                metric: '87% annual growth'
               },
               {
                 title: 'Regulatory Compliance',
-                description: 'PCI DSS Level 1 certification completed',
+                description: 'PCI DSS Level 1 certification completed with SOC 2 Type II compliance',
                 icon: '🛡️',
+                metric: '100% compliant'
               },
               {
                 title: 'Technical Scalability',
-                description: 'Sub-200ms payment processing globally',
+                description: 'Sub-200ms payment processing globally with 99.99% uptime',
                 icon: '⚡',
+                metric: '<200ms response time'
+              },
+              {
+                title: 'Data Intelligence',
+                description: 'Real-time spending pattern analysis and personalized recommendations',
+                icon: '📊',
+                metric: '7,500+ data points/user'
+              },
+              {
+                title: 'Partnership Network',
+                description: 'Strategic alliances with 2,500+ merchants across 45 countries',
+                icon: '🤝',
+                metric: '45 countries covered'
+              },
+              {
+                title: 'Capital Efficiency',
+                description: 'Market-leading unit economics with 4x higher LTV:CAC ratios',
+                icon: '📈',
+                metric: '$3.20 LTV:CAC'
+              },
+              {
+                title: 'User Experience',
+                description: 'One-click checkout and seamless integration with existing payment methods',
+                icon: '✨',
+                metric: '0.3 second load time'
+              },
+              {
+                title: 'Security Innovation',
+                description: 'Advanced fraud detection using machine learning and behavioral analytics',
+                icon: '🔐',
+                metric: '99.97% fraud prevention'
               },
             ].map((advantage, index) => (
               <motion.div
@@ -246,10 +280,19 @@ export function Market() {
                   {advantage.icon === '🔄' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />}
                   {advantage.icon === '🛡️' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
                   {advantage.icon === '⚡' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
+                  {advantage.icon === '📊' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />}
+                  {advantage.icon === '🤝' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />}
+                  {advantage.icon === '📈' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />}
+                  {advantage.icon === '✨' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
+                  {advantage.icon === '🔐' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />}
+
                 </svg>
               </div>
                 <h4 className="text-lg font-semibold mb-2">{advantage.title}</h4>
-                <p className="text-sm opacity-90">{advantage.description}</p>
+                <p className="text-sm opacity-90 mb-3">{advantage.description}</p>
+                <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold inline-block">
+                  {advantage.metric}
+                </div>
               </motion.div>
             ))}
           </div>
