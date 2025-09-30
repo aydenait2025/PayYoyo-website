@@ -124,31 +124,99 @@ const Icon: React.FC<IconProps> = ({ name, className = "w-8 h-8" }) => {
 };
 
 export function Solution() {
+  // Schema.org structured data for SoftwareApplication and Organization
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Paybubu",
+    "applicationCategory": "FinancialApplication",
+    "operatingSystem": "Web Browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free to use autonomous payment platform"
+    },
+    "description": "AI-powered autonomous payment platform that eliminates payment friction through GPS intelligence and machine learning optimization for gift card payments.",
+    "url": "https://paybubu.com",
+    "creator": {
+      "@type": "Organization",
+      "name": "Paybubu",
+      "url": "https://paybubu.com",
+      "description": "Revolutionary AI-powered payment automation platform"
+    },
+    "featureList": [
+      "GPS-triggered automation within 10 meters",
+      "AI-powered gift card intelligence",
+      "Zero user input required",
+      "Bank-level security (PCI DSS Level 1)"
+    ],
+    "screenshot": "https://paybubu.com/images/screenshot.png"
+  };
+
+  // Breadcrumb navigation schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://paybubu.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Solution",
+        "item": "https://paybubu.com#solution"
+      }
+    ]
+  };
 
   return (
-    <section id="solution" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center bg-[#10B981]/10 text-[#10B981] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-              </svg>
-              Revolutionary Solution
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Autonomous Payments, Finally Here
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Paybubu eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. No more forgotten cards, manual searches, or wasted value.
-            </p>
-          </motion.div>
-        </div>
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
+      <section
+        id="solution"
+        className="py-24 bg-white"
+        itemScope
+        itemType="https://schema.org/Service"
+      >
+        <meta itemProp="name" content="AI-Powered Autonomous Payment Solution" />
+        <meta itemProp="description" content="Experience revolutionary payment automation with Paybubu's GPS-triggered AI intelligence that analyzes and optimizes gift card payments automatically." />
+        <meta itemProp="areaServed" content="Global" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <header className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center bg-[#10B981]/10 text-[#10B981] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                Revolutionary Solution
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Autonomous Payments, Finally Here
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Paybubu eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value.
+              </p>
+            </motion.div>
+          </header>
 
         {/* How It Works */}
         <div className="mb-20">
@@ -291,6 +359,69 @@ export function Solution() {
           </div>
         </motion.div>
 
+        {/* FAQ Schema for Featured Snippets */}
+        <section className="mb-20" itemScope itemType="https://schema.org/FAQPage">
+          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+                Frequently Asked Questions
+              </h2>
+              <meta itemProp="name" content="Paybubu AI Payment Automation FAQs" />
+              <meta itemProp="description" content="Answers to common questions about AI-powered autonomous payments, GPS-triggered automation, and gift card optimization." />
+
+              <div className="space-y-6 max-w-4xl mx-auto">
+                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
+                    How does Paybubu's AI payment automation work?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <div itemProp="text" className="text-gray-600 leading-relaxed">
+                      Paybubu uses GPS location detection to trigger automatic analysis of your gift card portfolio when you arrive within 10 meters of participating merchants. Our machine learning algorithms instantly determine optimal card combinations to maximize value while minimizing waste, requiring only one-click confirmation for payment execution.
+                    </div>
+                  </div>
+                </div>
+
+                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
+                    What makes Paybubu different from other payment apps?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <div itemProp="text" className="text-gray-600 leading-relaxed">
+                      Unlike traditional payment apps that require manual searching and selection, Paybubu eliminates all user input through AI-driven automation. GPS-triggered intelligence analyzes your entire gift card portfolio in real-time, selecting optimal combinations automatically while providing bank-level security through PCI DSS Level 1 compliance.
+                    </div>
+                  </div>
+                </div>
+
+                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
+                    How secure is Paybubu's autonomous payment system?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <div itemProp="text" className="text-gray-600 leading-relaxed">
+                      Paybubu implements bank-level security with PCI DSS Level 1 compliance, end-to-end encryption, and Hardware Security Module (HSM) key management. All financial data is protected with enterprise-grade encryption, ensuring your gift card information and transactions remain completely secure during automated processing.
+                    </div>
+                  </div>
+                </div>
+
+                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
+                    When will Paybubu be available for public use?
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <div itemProp="text" className="text-gray-600 leading-relaxed">
+                      Paybubu is currently in private beta testing with select partners. Join our waiting list to receive early access notifications and be among the first to experience autonomous payment automation. We're working diligently to ensure enterprise-grade reliability before public launch.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -305,5 +436,6 @@ export function Solution() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
