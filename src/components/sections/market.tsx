@@ -22,7 +22,7 @@ export function Market() {
     {
       value: '$15.2B',
       label: 'Annual Waste',
-      sublabel: 'Paybubu's Impact Target',
+      sublabel: 'Paybubu’' + 's Impact Target',
     },
   ];
 

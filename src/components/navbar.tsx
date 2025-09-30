@@ -48,8 +48,8 @@ export function Navbar() {
                 { name: 'About', id: 'problem' },
                 { name: 'Solution', id: 'solution' },
                 { name: 'Market', id: 'market' },
-                { name: 'Advantage', id: 'advantage' },
-                { name: 'Contact', id: 'cta' },
+                { name: 'Advantage', id: 'market' },
+                { name: 'Contact', id: 'market' },
               ].map((item) => (
                 <button
                   key={item.name}
@@ -64,7 +64,7 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button onClick={() => scrollToSection('cta')} size="sm">
+            <Button onClick={() => scrollToSection('market')} size="sm">
               Get Early Access
             </Button>
           </div>

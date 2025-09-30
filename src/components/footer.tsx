@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 
 export function Footer() {
@@ -8,13 +10,11 @@ export function Footer() {
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <motion.div
-              className="flex items-center"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
               <h3 className="text-2xl font-bold text-[#1E40AF]">Paybubu</h3>
-              <span className="ml-2 text-sm text-gray-600">唯一的支付</span>
             </motion.div>
             <motion.p
               className="mt-4 text-gray-600 max-w-md"
