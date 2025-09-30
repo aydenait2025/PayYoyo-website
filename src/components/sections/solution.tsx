@@ -90,7 +90,7 @@ export function Solution() {
               {
                 step: '01',
                 title: 'Arrive at Merchant',
-                description: 'GPS detects your location within 10 meters of participating merchants',
+                description: 'GPS detects your location within 10 meters of participating merchants' offerings',
                 icon: 'location',
               },
               {
