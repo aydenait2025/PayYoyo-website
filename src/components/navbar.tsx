@@ -49,7 +49,7 @@ export function Navbar() {
                 { name: 'Solution', id: 'solution' },
                 { name: 'Market', id: 'market' },
                 { name: 'Advantage', id: 'market' },
-                { name: 'Contact', id: 'market' },
+                { name: 'Contact', id: 'contact' },
               ].map((item) => (
                 <button
                   key={item.name}
