@@ -2,51 +2,128 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import React from 'react';
+
+// TypeScript interfaces for better type safety
+interface Step {
+  step: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface Feature {
+  title: string;
+  description: string;
+  icon: React.ReactElement;
+  color: string;
+}
+
+// Constants extracted for reusability and maintainability
+const STEPS: Step[] = [
+  {
+    step: '01',
+    title: 'Arrive at Merchant',
+    description: "GPS detects your location within 10 meters of participating merchants' offerings",
+    icon: 'location',
+  },
+  {
+    step: '02',
+    title: 'AI Analyzes Cards',
+    description: 'Machine learning instantly analyzes your gift card portfolio and merchant options',
+    icon: 'ai',
+  },
+  {
+    step: '03',
+    title: 'Automatic Payment',
+    description: 'Optimal card combination selected and payment executed with one-click confirmation',
+    icon: 'payment',
+  },
+];
+
+const FEATURES: Feature[] = [
+  {
+    title: 'GPS-Triggered Automation',
+    description: 'AI detects your location within 10 meters of a merchant and automatically analyzes your gift card portfolio.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    color: 'bg-blue-100 text-blue-600',
+  },
+  {
+    title: 'AI Card Intelligence',
+    description: 'Machine learning determines optimal card combinations to maximize value and minimize waste.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+    color: 'bg-purple-100 text-purple-600',
+  },
+  {
+    title: 'Zero User Input',
+    description: 'Payments happen automatically with one-click confirmation, eliminating manual searching and selection.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    color: 'bg-green-100 text-green-600',
+  },
+  {
+    title: 'Bank-Level Security',
+    description: 'PCI DSS Level 1 compliance with end-to-end encryption and HSM key management for all financial data.',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+    ),
+    color: 'bg-indigo-100 text-indigo-600',
+  },
+];
+
+// Animation constants to eliminate magic numbers
+const ANIMATION_CONFIG = {
+  duration: 0.8,
+  delay: 0.3,
+};
+
+// Icon component to eliminate repetitive SVG code
+interface IconProps {
+  name: string;
+  className?: string;
+}
+
+const Icon: React.FC<IconProps> = ({ name, className = "w-8 h-8" }) => {
+  const iconComponents: Record<string, React.ReactElement> = {
+    location: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    ai: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+    payment: (
+      <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+      </svg>
+    ),
+    checkmark: (
+      <svg className={`${className} mr-2`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      </svg>
+    ),
+  };
+
+  return iconComponents[name] || null;
+};
 
 export function Solution() {
-  const features = [
-    {
-      title: 'GPS-Triggered Automation',
-      description: 'AI detects your location within 10 meters of a merchant and automatically analyzes your gift card portfolio.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
-      color: 'bg-blue-100 text-blue-600',
-    },
-    {
-      title: 'AI Card Intelligence',
-      description: 'Machine learning determines optimal card combinations to maximize value and minimize waste.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-        </svg>
-      ),
-      color: 'bg-purple-100 text-purple-600',
-    },
-    {
-      title: 'Zero User Input',
-      description: 'Payments happen automatically with one-click confirmation, eliminating manual searching and selection.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      color: 'bg-green-100 text-green-600',
-    },
-    {
-      title: 'Bank-Level Security',
-      description: 'PCI DSS Level 1 compliance with end-to-end encryption and HSM key management for all financial data.',
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
-      ),
-      color: 'bg-indigo-100 text-indigo-600',
-    },
-  ];
 
   return (
     <section id="solution" className="py-24 bg-white">
@@ -86,39 +163,16 @@ export function Solution() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Arrive at Merchant',
-                description: 'GPS detects your location within 10 meters of participating merchants' offerings',
-                icon: 'location',
-              },
-              {
-                step: '02',
-                title: 'AI Analyzes Cards',
-                description: 'Machine learning instantly analyzes your gift card portfolio and merchant options',
-                icon: 'ai',
-              },
-              {
-                step: '03',
-                title: 'Automatic Payment',
-                description: 'Optimal card combination selected and payment executed with one-click confirmation',
-                icon: 'payment',
-              },
-            ].map((step, index) => (
+            {STEPS.map((step: Step, index: number) => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 }}
                 className="text-center bg-gray-50 rounded-xl p-8"
               >
                 <div className="w-16 h-16 bg-[#1E40AF] text-white rounded-full flex items-center justify-center mb-4">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    {step.icon === 'location' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />}
-                    {step.icon === 'ai' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />}
-                    {step.icon === 'payment' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />}
-                  </svg>
+                  <Icon name={step.icon} />
                 </div>
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-[#1E40AF] text-white text-xl font-bold rounded-full mb-6">
                   {step.step}
@@ -131,31 +185,42 @@ export function Solution() {
         </div>
 
         {/* Key Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+        <section
           className="mb-20"
+          role="region"
+          aria-labelledby="features-heading"
         >
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-12">Powered by Advanced Technology</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
-                  {feature.icon}
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: ANIMATION_CONFIG.duration }}
+          >
+            <h3 id="features-heading" className="text-2xl font-bold text-center text-gray-900 mb-12">
+              Powered by Advanced Technology
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {FEATURES.map((feature: Feature, index: number) => (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.1 }}
+                  className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                >
+                  <div
+                    className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center mb-4`}
+                    role="img"
+                    aria-label={`${feature.title} icon`}
+                  >
+                    {feature.icon}
+                  </div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">{feature.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </section>
 
         {/* Before/After Comparison */}
         <motion.div
