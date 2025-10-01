@@ -93,7 +93,7 @@ export default function About() {
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               PayYoyo was founded to eliminate gift card waste through AI-powered autonomous payments.
-              We're building the future of gift card management for both consumers and merchants worldwide.
+              We&apos;re building the future of gift card management for both consumers and merchants worldwide.
             </p>
           </motion.div>
         </div>
@@ -116,7 +116,7 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
               <p className="text-gray-600 leading-relaxed">
-                To eliminate $15.2 billion in annual gift card waste by creating the world's
+                To eliminate $15.2 billion in annual gift card waste by creating the world&apos;s
                 most intelligent gift card management platform. We empower customers to save money
                 and time while helping merchants increase redemption rates through better technology.
               </p>
@@ -339,7 +339,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Join the Gift Card Revolution?</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Whether you're a customer wanting to save money or a merchant looking to boost sales,
+              Whether you&apos;re a customer wanting to save money or a merchant looking to boost sales,
               PayYoyo creates win-win opportunities for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
