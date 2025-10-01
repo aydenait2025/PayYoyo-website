@@ -3,40 +3,74 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 
+// TypeScript interfaces for better type safety
+interface TeamMember {
+  name: string;
+  role: string;
+  description: string;
+  image: string | null;
+}
+
+interface CompanyValue {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+// Constants moved outside component to avoid recreation on re-renders
+const TEAM_MEMBERS = [
+  {
+    name: 'Ayden AI',
+    role: 'Founder & CEO',
+    description: 'AI expert with 10+ years in fintech innovation',
+    image: null,
+  },
+  // Add more team members as needed
+];
+
+const COMPANY_VALUES: CompanyValue[] = [
+  {
+    title: 'Customer-Centric Innovation',
+    description: 'Every feature we build starts with solving real customer pain points.',
+    icon: '👥'
+  },
+  {
+    title: 'Merchant Partnership',
+    description: 'We believe in win-win relationships that grow everyone\'s business.',
+    icon: '🤝'
+  },
+  {
+    title: 'AI-First Approach',
+    description: 'Leveraging artificial intelligence to create smarter financial solutions.',
+    icon: '🤖'
+  },
+  {
+    title: 'Gift Card Revolution',
+    description: 'Transforming how $400B+ in gift cards are managed globally.',
+    icon: '💎'
+  }
+];
+
+// Shared animation variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 }
+};
+
+const fadeInLeft = {
+  initial: { opacity: 0, x: -20 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 }
+};
+
+const fadeInRight = {
+  initial: { opacity: 0, x: 20 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 }
+};
+
 export default function About() {
-  const team = [
-    {
-      name: 'Ayden AI',
-      role: 'Founder & CEO',
-      description: 'AI expert with 10+ years in fintech innovation',
-      image: null, // We'll use initals or icon
-    },
-    // Add more team members as needed
-  ];
-
-  const values = [
-    {
-      title: 'Customer-Centric Innovation',
-      description: 'Every feature we build starts with solving real customer pain points.',
-      icon: '👥'
-    },
-    {
-      title: 'Merchant Partnership',
-      description: 'We believe in win-win relationships that grow everyone\'s business.',
-      icon: '🤝'
-    },
-    {
-      title: 'AI-First Approach',
-      description: 'Leveraging artificial intelligence to create smarter financial solutions.',
-      icon: '🤖'
-    },
-    {
-      title: 'Gift Card Revolution',
-      description: 'Transforming how $400B+ in gift cards are managed globally.',
-      icon: '💎'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       {/* Header */}
@@ -244,7 +278,7 @@ export default function About() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {COMPANY_VALUES.map((value, index) => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -275,7 +309,7 @@ export default function About() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
+            {TEAM_MEMBERS.map((member, index) => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -284,7 +318,7 @@ export default function About() {
                 className="bg-gray-50 rounded-xl p-8 text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-[#1E40AF] to-[#3B82F6] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                  {member.name.split(' ').map(n => n[0]).join('')}
+                  {member.name.split(' ').map((n: string) => n[0]).join('')}
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h4>
                 <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
