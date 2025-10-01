@@ -22,7 +22,7 @@ export function Market() {
     {
       value: '$15.2B',
       label: 'Annual Waste',
-      sublabel: 'PayYoyo Wallet’' + 's Impact Target',
+      sublabel: "PayYoyo Wallet's Impact Target",
     },
   ];
 
@@ -101,7 +101,7 @@ export function Market() {
               A $364B Market Waiting for Disruption
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
+              We're targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
             </p>
           </motion.div>
         </div>
@@ -111,7 +111,7 @@ export function Market() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
         >
           {marketStats.map((stat, index) => (
             <div key={stat.label} className="text-center bg-gray-50 rounded-xl p-8">
@@ -120,6 +120,21 @@ export function Market() {
               <div className="text-sm text-gray-600">{stat.sublabel}</div>
             </div>
           ))}
+        </motion.div>
+
+        {/* Market Sources */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-center mb-20"
+        >
+          <div className="inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm">
+            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Market data based on industry research and analysis
+          </div>
         </motion.div>
 
         {/* Target Segments */}
@@ -204,9 +219,9 @@ export function Market() {
           className="bg-gradient-to-r from-[#1E40AF] to-[#3730A3] rounded-2xl p-12 text-white"
         >
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Sustainable Competitive Advantages</h3>
+            <h3 className="text-3xl font-bold mb-4">Strategic Advantages We're Engineering</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Proprietary AI technology and payment intelligence create barriers no competitor can easily overcome.
+              Innovative AI technology and payment intelligence to create competitive barriers that no competitor can easily overcome.
             </p>
           </div>
 
@@ -214,9 +229,9 @@ export function Market() {
             {[
               {
                 title: 'AI First Mover',
-                description: '5 years of payment AI development advantage with proprietary algorithms trained on 50M+ transactions',
+                description: 'Early payment AI development with proprietary algorithms for intelligent card optimization',
                 icon: '🤖',
-                metric: '50M+ transactions analyzed'
+                metric: 'Proprietary payment optimization'
               },
               {
                 title: 'Network Effects',
@@ -238,15 +253,15 @@ export function Market() {
               },
               {
                 title: 'Data Intelligence',
-                description: 'Real-time spending pattern analysis and personalized recommendations',
+                description: 'Intelligent spending analysis and personalized recommendations for optimal card usage',
                 icon: '📊',
-                metric: '7,500+ data points/user'
+                metric: 'Personalized insights'
               },
               {
                 title: 'Partnership Network',
-                description: 'Strategic alliances with 2,500+ merchants across 45 countries',
+                description: 'Building strategic merchant partnerships for expanded payment acceptance',
                 icon: '🤝',
-                metric: '45 countries covered'
+                metric: 'Expanding network'
               },
               {
                 title: 'Capital Efficiency',

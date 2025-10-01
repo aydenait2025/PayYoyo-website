@@ -40,7 +40,7 @@ export function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ml-4 md:ml-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -80,12 +80,7 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button onClick={() => scrollToSection('market')} size="sm">
-              Get Early Access
-            </Button>
-          </div>
+
 
           {/* Mobile menu button */}
           <div className="md:hidden">

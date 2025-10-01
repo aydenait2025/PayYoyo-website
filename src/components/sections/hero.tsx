@@ -45,8 +45,8 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              The World First
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              The World's First
               <span className="block text-[#1E40AF]">Truly Autonomous</span>
               Payment System
             </h1>
@@ -60,7 +60,7 @@ export function Hero() {
             className="mb-8"
           >
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              PayYoyo Wallet eliminates gift card waste forever through AI-driven GPS intelligence and autonomous financial optimization. Never forget, mismanage, or lose your gift cards again.
+              PayYoyo helps customers avoid waste, save money and time with smart gift card management. For merchants like Walmart, Best Buy, and Esso, we drive more gift card sales through exclusive partnerships and seamless redemption.
             </p>
           </motion.div>
 
@@ -94,26 +94,54 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Button size="lg" className="px-8 py-4 text-lg" onClick={handleGetEarlyAccess}>
-              Get Early Access
+              Join 10,000+ Users on Our Waitlist
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg" onClick={handleWatchDemo}>
-              Watch Demo
+              See How It Works
             </Button>
           </motion.div>
 
-          {/* Social Proof */}
+          {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
+            className="mb-8"
           >
-            <p className="text-gray-500 text-sm mb-6">Trusted by emerging fintech innovators</p>
+            {/* Security & Trust Badges */}
+            <div className="flex justify-center items-center space-x-6 mb-6">
+              <div className="flex items-center space-x-2 bg-green-50 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                <span>Bank-Level Security</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>PCI DSS Compliant</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>SOC 2 Type II</span>
+              </div>
+            </div>
+
+            {/* Partner Logos */}
+            <p className="text-gray-500 text-sm mb-4">Trusted by leading financial institutions</p>
             <div className="flex justify-center items-center space-x-8 opacity-60">
-              {['Visa', 'Mastercard', 'American Express'].map((company) => (
-                <div key={company} className="text-gray-400 font-semibold">
-                  {company}
-                </div>
-              ))}
+              <div className="w-16 h-8 bg-blue-600 text-white text-xs font-bold flex items-center justify-center rounded">
+                VISA
+              </div>
+              <div className="w-20 h-8 bg-red-600 text-white text-xs font-bold flex items-center justify-center rounded">
+                MasterCard
+              </div>
+              <div className="w-24 h-8 bg-blue-800 text-white text-xs font-bold flex items-center justify-center rounded">
+                AMEX
+              </div>
             </div>
           </motion.div>
         </div>

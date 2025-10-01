@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PayYoYo - AI-Powered Autonomous Payment Platform | Revolutionize Gift Card Payments",
   description: "Transform your payment experience with PayYoyo Wallet's AI-driven automation. GPS-triggered intelligence analyzes your gift cards and executes optimal payments automatically. Join the future of frictionless commerce.",
-  keywords: "AI payment automation, autonomous payments, gift card optimization, GPS payment, machine learning payments, contactless payment, financial technology, fintech innovation",
+  keywords: "AI payment automation, autonomous payments, gift card optimization, GPS payment, fintech, payment automation",
   authors: [{ name: "PayYoyo Wallet Team" }],
   creator: "PayYoyo Wallet",
   publisher: "PayYoyo Wallet",

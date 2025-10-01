@@ -23,64 +23,54 @@ interface Feature {
 const STEPS: Step[] = [
   {
     step: '01',
-    title: 'Arrive at Merchant',
-    description: "GPS detects your location within 10 meters of participating merchants' offerings",
+    title: 'Smart Location Detection',
+    description: 'When you arrive near a store, our app automatically detects where you are and identifies participating merchants.',
     icon: 'location',
   },
   {
     step: '02',
-    title: 'AI Analyzes Cards',
-    description: 'Machine learning instantly analyzes your gift card portfolio and merchant options',
+    title: 'Instant Card Analysis',
+    description: 'Our AI quickly scans all your gift cards and calculates the best combination to maximize savings.',
     icon: 'ai',
   },
   {
     step: '03',
-    title: 'Automatic Payment',
-    description: 'Optimal card combination selected and payment executed with one-click confirmation',
+    title: 'One-Tap Payment',
+    description: 'Review and confirm - that\'s it! Your payment is processed instantly with optimal card usage.',
     icon: 'payment',
   },
 ];
 
 const FEATURES: Feature[] = [
   {
-    title: 'GPS-Triggered Automation',
-    description: 'AI detects your location within 10 meters of a merchant and automatically analyzes your gift card portfolio.',
+    title: 'Bank-Level Security',
+    description: 'PCI DSS Level 1 compliance with end-to-end encryption and HSM key management.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
       </svg>
     ),
     color: 'bg-blue-100 text-blue-600',
   },
   {
-    title: 'AI Card Intelligence',
-    description: 'Machine learning determines optimal card combinations to maximize value and minimize waste.',
+    title: 'Real-Time Optimization',
+    description: 'Machine learning algorithms constantly improve suggestions based on user behavior.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
     color: 'bg-purple-100 text-purple-600',
   },
   {
-    title: 'Zero User Input',
-    description: 'Payments happen automatically with one-click confirmation, eliminating manual searching and selection.',
+    title: 'Sub-200ms Response',
+    description: 'Lightning-fast processing ensures seamless checkout without any delays.',
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
     color: 'bg-green-100 text-green-600',
-  },
-  {
-    title: 'Bank-Level Security',
-    description: 'PCI DSS Level 1 compliance with end-to-end encryption and HSM key management for all financial data.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
-    color: 'bg-indigo-100 text-indigo-600',
   },
 ];
 
@@ -210,10 +200,10 @@ export function Solution() {
                 Revolutionary Solution
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Autonomous Payments, Finally Here
+                Autonomous Payment Processing - The Future of Gift Card Management
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                PayYoyo Wallet eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value.
+                PayYoyo Wallet eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value. Experience the world's first truly autonomous payment automation system.
               </p>
             </motion.div>
           </header>
@@ -224,33 +214,106 @@ export function Solution() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">How PayYoyo Wallet Works</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">Seamless automation in three simple steps</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">How PayYoyo Wallet Works</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Seamless automation in three simple steps</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Steps Flow */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
             {STEPS.map((step: Step, index: number) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 }}
-                className="text-center bg-gray-50 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-[#1E40AF] text-white rounded-full flex items-center justify-center mb-4">
-                  <Icon name={step.icon} />
-                </div>
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-[#1E40AF] text-white text-xl font-bold rounded-full mb-6">
-                  {step.step}
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h4>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
-              </motion.div>
+              <React.Fragment key={step.step}>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 }}
+                  className="text-center bg-gray-50 rounded-xl p-8 min-w-[280px] relative"
+                >
+                  <div className="w-16 h-16 bg-[#1E40AF] text-white rounded-full flex items-center justify-center mb-4 mx-auto">
+                    <Icon name={step.icon} />
+                  </div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                </motion.div>
+                {/* Arrow between steps on larger screens */}
+                {index < STEPS.length - 1 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 + 0.3 }}
+                    className="hidden lg:block text-[#1E40AF] text-4xl font-light"
+                  >
+                    →
+                  </motion.div>
+                )}
+                {/* Vertical arrow between steps on mobile */}
+                {index < STEPS.length - 1 && (
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 + 0.3 }}
+                    className="lg:hidden text-[#1E40AF] text-3xl font-light flex justify-center"
+                  >
+                    ↓
+                  </motion.div>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
+
+        {/* Why PayYoyo */}
+        <section className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-8">Why PayYoyo?</h3>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {/* For Customers */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 text-center"
+            >
+              <div className="text-6xl mb-6">💡</div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">For Customers</h4>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Smarter gift cards. Never let a balance go to waste. PayYoyo helps you save money, time, and frustration with AI-powered gift card management. One wallet, every store — always the right card, at the right time.
+              </p>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <p className="text-sm text-gray-600">
+                  <strong className="text-blue-600">Customer Value:</strong> Avoid waste, save money/time, get discount gift cards
+                </p>
+              </div>
+            </motion.div>
+
+            {/* For Merchants */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center"
+            >
+              <div className="text-6xl mb-6">🚀</div>
+              <h4 className="text-2xl font-bold text-gray-900 mb-6">For Merchants</h4>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                More sales, seamless redemption. With PayYoyo, retailers like Walmart, Best Buy, and Esso grow gift card sales through exclusive partnerships, effortless redemption, and happier, repeat customers.
+              </p>
+              <div className="bg-white rounded-lg p-4 shadow-sm">
+                <p className="text-sm text-gray-600">
+                  <strong className="text-green-600">Merchant Benefits:</strong> Increased redemption, faster checkout, better customer experience
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Key Features */}
         <section
@@ -264,16 +327,16 @@ export function Solution() {
             transition={{ duration: ANIMATION_CONFIG.duration }}
           >
             <h3 id="features-heading" className="text-2xl font-bold text-center text-gray-900 mb-12">
-              Powered by Advanced Technology
+              Key Features
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {FEATURES.map((feature: Feature, index: number) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.1 }}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
                   <div
                     className={`w-16 h-16 ${feature.color} rounded-xl flex items-center justify-center mb-4`}

@@ -60,10 +60,10 @@ export function Problem() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The Gift Card Waste Crisis
+              The $15.2 Billion Gift Card Waste Crisis
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Traditional gift cards create $15.2 billion in annual waste and payment friction that affects every consumer and merchant.
+              Traditional gift cards create $15.2 billion in annual waste and payment friction that affects every consumer and merchant. 51% of gift cards go unspent, leading to massive financial losses for both consumers and businesses.
             </p>
           </motion.div>
         </div>
