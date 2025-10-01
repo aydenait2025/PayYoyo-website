@@ -19,7 +19,7 @@ export default function CashierGuide() {
               PayYoyo Cashier Quick Guide
             </h1>
             <h2 className="text-xl md:text-2xl text-[#1E40AF] font-semibold mb-8">
-              The World's First Autonomous Gift Card Wallet
+              The World&#39;s First Autonomous Gift Card Wallet
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Everything merchants and cashiers need to know about accepting PayYoyo payments at the point of sale.
