@@ -51,7 +51,7 @@ export function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-24 bg-gray-50">
+    <section id="problem" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
@@ -60,10 +60,10 @@ export function Problem() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              The $15.2 Billion Gift Card Waste Crisis
+              The Hidden Gift Card Problem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Traditional gift cards create $15.2 billion in annual waste and payment friction that affects every consumer and merchant. 51% of gift cards go unspent, leading to massive financial losses for both consumers and businesses.
+              Most people have gift cards they've completely forgotten about. The average person wastes $53 every month on unused gift cards - that's money just sitting there, unused.
             </p>
           </motion.div>
         </div>

@@ -25,7 +25,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-20 flex justify-center bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -43,12 +43,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="mb-4"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              The World&apos;s First
-              <span className="block text-[#1E40AF]">Truly Autonomous</span>
-              Payment System
+            <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+              Never Lose Gift Card Value
+              <span className="block text-[#1E40AF]">Again</span>
             </h1>
           </motion.div>
 
@@ -57,10 +56,10 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
+            className="mb-4"
           >
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              PayYoyo helps customers avoid waste, save money and time with smart gift card management. For merchants like Walmart, Best Buy, and Esso, we drive more gift card sales through exclusive partnerships and seamless redemption.
+              Smart app that automatically finds and uses your gift cards at checkout. Never forget or lose gift card value again.
             </p>
           </motion.div>
 
@@ -118,50 +117,24 @@ export function Hero() {
               </div>
               <div className="flex items-center space-x-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <span>PCI DSS Compliant</span>
+                <span>Your Cards Are Safe</span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span>SOC 2 Type II</span>
+                <span>Encrypted & Protected</span>
               </div>
             </div>
 
-            {/* Partner Logos */}
-            <p className="text-gray-500 text-sm mb-4">Trusted by leading financial institutions</p>
-            <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="w-16 h-8 bg-blue-600 text-white text-xs font-bold flex items-center justify-center rounded">
-                VISA
-              </div>
-              <div className="w-20 h-8 bg-red-600 text-white text-xs font-bold flex items-center justify-center rounded">
-                MasterCard
-              </div>
-              <div className="w-24 h-8 bg-blue-800 text-white text-xs font-bold flex items-center justify-center rounded">
-                AMEX
-              </div>
-            </div>
+
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-[#1E40AF] rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
+
 
       {/* Modals */}
       <Modal isOpen={showSignupModal} onClose={closeModals}>

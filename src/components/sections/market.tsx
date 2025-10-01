@@ -29,60 +29,67 @@ export function Market() {
   const segments = [
     {
       title: 'Urban Professionals',
-      size: '75M',
-      description: 'Tech-savvy 25-45 year olds with $75K+ income',
-      opportunity: '$240/year average savings',
+      size: '5.2M',
+      description: 'Tech-savvy professionals in Toronto, Vancouver, Montreal',
+      opportunity: '$180/year average savings',
       icon: '🏙️',
     },
     {
       title: 'Family Households',
-      size: '43M',
-      description: 'Dual-income families managing shared gift cards',
-      opportunity: '$360/year household savings',
+      size: '3.8M',
+      description: 'Dual-income families managing household gift cards',
+      opportunity: '$240/year household savings',
       icon: '🏡',
     },
     {
-      title: 'B2B Corporate',
-      size: '85K',
-      description: 'Companies distributing gift cards as incentives',
-      opportunity: '$1.2M annual corporate savings',
+      title: 'Small & Medium Businesses',
+      size: '12K',
+      description: 'Canadian SMBs distributing gift cards to employees',
+      opportunity: '$85K annual corporate savings',
       icon: '🏢',
     },
   ];
 
   const growth = [
     {
-      year: '2025',
-      mrr: '$45',
-      users: '500K',
-      revenue: '$27M',
-      description: 'Beta launch and initial traction',
-    },
-    {
       year: '2026',
-      mrr: '$78',
-      users: '2.1M',
-      revenue: '$120M',
-      description: 'Scale operations and international expansion',
+      mrr: '$25',
+      users: '50K',
+      revenue: '$3.6M',
+      description: 'Initial Canadian market entry',
     },
     {
       year: '2027',
-      mrr: '$150',
-      users: '5.5M',
-      revenue: '$330M',
-      description: 'Market leadership and ecosystem dominance',
+      mrr: '$55',
+      users: '250K',
+      revenue: '$19.8M',
+      description: 'Rapid adoption and partnerships',
+    },
+    {
+      year: '2028',
+      mrr: '$120',
+      users: '800K',
+      revenue: '$86.4M',
+      description: 'Cross-border expansion',
+    },
+    {
+      year: '2029',
+      mrr: '$250',
+      users: '2.1M',
+      revenue: '$252M',
+      description: 'Market consolidation and growth',
     },
     {
       year: '2030',
       mrr: '$450',
-      users: '15M+',
-      revenue: '$1.2B',
-      description: 'Global autonomous payments standard',
+      users: '4.5M',
+      revenue: '$486M',
+      description: 'Dominant Canadian financial tech platform',
     },
   ];
 
   return (
-    <section id="market" className="py-24 bg-white">
+    <section id="market" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
@@ -98,10 +105,10 @@ export function Market() {
               Market Opportunity
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              A $364B Market Waiting for Disruption
+              Massive Market Opportunity
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We are targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
+              The gift card industry is huge, but most cards go unused. We're solving a real problem that affects millions of people and costs billions every year.
             </p>
           </motion.div>
         </div>
@@ -179,35 +186,51 @@ export function Market() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mb-20"
         >
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">Revenue Growth Trajectory</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-16">Canadian Market Growth Trajectory (2026-2030)</h3>
+
+          {/* Compact Growth Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {growth.map((year, index) => (
               <motion.div
                 key={year.year}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-lg border border-gray-200"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="text-2xl font-bold text-[#1E40AF] mb-4">{year.year}</div>
-                <div className="space-y-3">
-                  <div>
-                    <div className="text-2xl font-bold text-gray-900">{year.mrr}</div>
-                    <div className="text-sm text-gray-600">Monthly Recurring Revenue</div>
+                <div className="text-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#3B82F6] to-[#10B981] rounded-xl flex items-center justify-center mx-auto mb-3 shadow-lg">
+                    <span className="text-lg font-bold text-white">{index + 1}</span>
                   </div>
-                  <div>
-                    <div className="text-xl font-semibold text-gray-900">{year.users}</div>
-                    <div className="text-sm text-gray-600">Active Users</div>
+                  <h4 className="text-lg font-bold text-gray-900">{year.year}</h4>
+                  <p className="text-xs text-gray-600 capitalize leading-tight">{year.description}</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-[#1E40AF]">{year.users}</div>
+                    <div className="text-xs text-gray-600 font-medium">Users</div>
                   </div>
-                  <div>
-                    <div className="text-xl font-semibold text-[#10B981]">{year.revenue}</div>
-                    <div className="text-sm text-gray-600">Annual Revenue</div>
+
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-[#10B981]">{year.mrr}</div>
+                    <div className="text-xs text-gray-600 font-medium">MRR</div>
+                  </div>
+
+                  <div className="text-center pt-3 border-t border-gray-200">
+                    <div className="text-sm font-bold text-[#8B5CF6]">{year.revenue}</div>
+                    <div className="text-xs text-gray-600">Annual Revenue</div>
                   </div>
                 </div>
-                <p className="text-sm text-gray-600 mt-4">{year.description}</p>
               </motion.div>
             ))}
           </div>
+
+
+
+          <p className="text-center text-sm text-gray-500 mt-8">
+            *Conservative projections based on Canadian market potential of 40M users over 5 years
+          </p>
         </motion.div>
 
         {/* Competitive Moat */}
@@ -219,67 +242,49 @@ export function Market() {
           className="bg-gradient-to-r from-[#1E40AF] to-[#3730A3] rounded-2xl p-12 text-white"
         >
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Strategic Advantages We&apos;re Engineering</h3>
+            <h3 className="text-3xl font-bold mb-4">Why We're Different</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              Innovative AI technology and payment intelligence to create competitive barriers that no competitor can easily overcome.
+              We're building something unique that solves real problems in a way no one else can match.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {[
               {
-                title: 'AI First Mover',
-                description: 'Early payment AI development with proprietary algorithms for intelligent card optimization',
+                title: 'First to Market',
+                description: 'We\'re the first company to use AI and location data to automatically manage gift cards',
                 icon: '🤖',
-                metric: 'Proprietary payment optimization'
+                metric: 'Unique approach'
               },
               {
-                title: 'Network Effects',
-                description: 'Merchant and user ecosystems grow exponentially with each new participant',
+                title: 'Growing Network',
+                description: 'More merchants and users means better value for everyone involved',
                 icon: '🔄',
-                metric: '87% annual growth'
+                metric: 'Network effects'
               },
               {
-                title: 'Regulatory Compliance',
-                description: 'PCI DSS Level 1 certification completed with SOC 2 Type II compliance',
+                title: 'Trusted & Secure',
+                description: 'Bank-level security ensures your financial data stays completely protected',
                 icon: '🛡️',
-                metric: '100% compliant'
+                metric: 'Enterprise-grade'
               },
               {
-                title: 'Technical Scalability',
-                description: 'Sub-200ms payment processing globally with 99.99% uptime',
+                title: 'Lightning Fast',
+                description: 'Instant processing means no waiting - just seamless payments',
                 icon: '⚡',
-                metric: '<200ms response time'
+                metric: 'Sub-second'
               },
               {
-                title: 'Data Intelligence',
-                description: 'Intelligent spending analysis and personalized recommendations for optimal card usage',
+                title: 'Smart Insights',
+                description: 'AI learns your preferences to make better gift card recommendations',
                 icon: '📊',
-                metric: 'Personalized insights'
+                metric: 'Personalized'
               },
               {
-                title: 'Partnership Network',
-                description: 'Building strategic merchant partnerships for expanded payment acceptance',
+                title: 'Strong Partnerships',
+                description: 'Working directly with major retailers to expand acceptance',
                 icon: '🤝',
-                metric: 'Expanding network'
-              },
-              {
-                title: 'Capital Efficiency',
-                description: 'Market-leading unit economics with 4x higher LTV:CAC ratios',
-                icon: '📈',
-                metric: '$3.20 LTV:CAC'
-              },
-              {
-                title: 'User Experience',
-                description: 'One-click checkout and seamless integration with existing payment methods',
-                icon: '✨',
-                metric: '0.3 second load time'
-              },
-              {
-                title: 'Security Innovation',
-                description: 'Advanced fraud detection using machine learning and behavioral analytics',
-                icon: '🔐',
-                metric: '99.97% fraud prevention'
+                metric: 'Growing reach'
               },
             ].map((advantage, index) => (
               <motion.div
@@ -289,20 +294,7 @@ export function Market() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6"
               >
-              <div className="w-16 h-16 bg-white/20 text-white rounded-xl flex items-center justify-center mb-4">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {advantage.icon === '🤖' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />}
-                  {advantage.icon === '🔄' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />}
-                  {advantage.icon === '🛡️' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
-                  {advantage.icon === '⚡' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />}
-                  {advantage.icon === '📊' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />}
-                  {advantage.icon === '🤝' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />}
-                  {advantage.icon === '📈' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />}
-                  {advantage.icon === '✨' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
-                  {advantage.icon === '🔐' && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />}
-
-                </svg>
-              </div>
+                <div className="text-4xl mb-4">{advantage.icon}</div>
                 <h4 className="text-lg font-semibold mb-2">{advantage.title}</h4>
                 <p className="text-sm opacity-90 mb-3">{advantage.description}</p>
                 <div className="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-semibold inline-block">

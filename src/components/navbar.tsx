@@ -56,7 +56,7 @@ export function Navbar() {
                 { name: 'About', id: 'problem' },
                 { name: 'Solution', id: 'solution' },
                 { name: 'Market', id: 'market' },
-                { name: 'Advantage', id: 'market' },
+                { name: 'Advantage', id: 'advantage' },
                 { name: 'Contact', id: 'contact' },
               ].map((item) => (
                 <motion.button
