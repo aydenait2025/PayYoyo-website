@@ -35,7 +35,7 @@ export function SignupForm({ onClose }: SignupFormProps) {
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Welcome to PayYoyo Wallet!</h3>
         <p className="text-gray-600 mb-6">
-          You've been added to our early access list. We'll notify you when we launch!
+          You have been added to our early access list. We will notify you when we launch!
         </p>
         <Button onClick={onClose} className="w-full">
           Great!

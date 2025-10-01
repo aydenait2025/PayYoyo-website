@@ -101,7 +101,7 @@ export function Market() {
               A $364B Market Waiting for Disruption
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
+              We are targeting the $15.2B annual gift card waste problem with a solution that could redefine payments globally.
             </p>
           </motion.div>
         </div>
@@ -219,7 +219,7 @@ export function Market() {
           className="bg-gradient-to-r from-[#1E40AF] to-[#3730A3] rounded-2xl p-12 text-white"
         >
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Strategic Advantages We're Engineering</h3>
+            <h3 className="text-3xl font-bold mb-4">Strategic Advantages We&apos;re Engineering</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Innovative AI technology and payment intelligence to create competitive barriers that no competitor can easily overcome.
             </p>

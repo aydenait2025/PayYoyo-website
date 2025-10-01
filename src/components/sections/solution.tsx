@@ -203,7 +203,7 @@ export function Solution() {
                 Autonomous Payment Processing - The Future of Gift Card Management
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                PayYoyo Wallet eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value. Experience the world's first truly autonomous payment automation system.
+                PayYoyo Wallet eliminates payment friction forever through AI-powered GPS intelligence and autonomous financial optimization. Say goodbye to forgotten cards, manual searches, and wasted gift card value. Experience the world&apos;s first truly autonomous payment automation system.
               </p>
             </motion.div>
           </header>
