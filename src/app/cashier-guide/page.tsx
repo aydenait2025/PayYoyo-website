@@ -246,7 +246,7 @@ export default function CashierGuide() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Fallback Option</div>
-                    <div className="text-sm text-gray-700">If scanning fails, customer can tap "Show Gift Card Number" and enter manually</div>
+                    <div className="text-sm text-gray-700">If scanning fails, customer can tap &quot;Show Gift Card Number&quot; and enter manually</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">

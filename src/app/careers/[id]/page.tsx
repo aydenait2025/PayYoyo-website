@@ -355,7 +355,7 @@ As an AI Research Scientist at PayYoyo, you will:
         <div className="pt-24 pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Position Not Found</h1>
-            <p className="text-xl text-gray-600 mb-8">The job position you're looking for doesn't exist or has been closed.</p>
+            <p className="text-xl text-gray-600 mb-8">The job position you&apos;re looking for doesn&apos;t exist or has been closed.</p>
             <Button
               onClick={() => router.push('/careers')}
               className="bg-[#1E40AF] hover:bg-[#1D4ED8] text-white"

@@ -176,7 +176,7 @@ export default function CareersPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're revolutionizing how the world handles payments through AI-powered, zero-waste technology. Join our talented team and help shape the future of fintech.
+              We&apos;re revolutionizing how the world handles payments through AI-powered, zero-waste technology. Join our talented team and help shape the future of fintech.
             </p>
           </motion.div>
         </div>
@@ -252,7 +252,7 @@ export default function CareersPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Open Positions</h2>
-            <p className="text-xl text-gray-600 mb-8">We're looking for exceptional talent to join our mission</p>
+            <p className="text-xl text-gray-600 mb-8">We&apos;re looking for exceptional talent to join our mission</p>
 
             {/* Search Bar */}
             <div className="max-w-4xl mx-auto">
@@ -341,9 +341,9 @@ export default function CareersPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center mt-16 bg-[#1E40AF] text-white rounded-2xl p-12"
           >
-            <h3 className="text-3xl font-bold mb-6">Don't See Your Position?</h3>
+            <h3 className="text-3xl font-bold mb-6">Don&apos;t See Your Position?</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto mb-8">
-              We're always looking for exceptional talent. Send us your resume and we'll reach out if there's a match for your skills.
+              We&apos;re always looking for exceptional talent. Send us your resume and we&apos;ll reach out if there&apos;s a match for your skills.
             </p>
             <Button
               size="lg"
