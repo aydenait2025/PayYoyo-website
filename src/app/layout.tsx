@@ -1,84 +1,68 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+'use client';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import { motion } from 'framer-motion'
+import './globals.css'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "PayYoYo - AI-Powered Autonomous Payment Platform | Revolutionize Gift Card Payments",
-  description: "Transform your payment experience with PayYoyo Wallet's AI-driven automation. GPS-triggered intelligence analyzes your gift cards and executes optimal payments automatically. Join the future of frictionless commerce.",
-  keywords: "AI payment automation, autonomous payments, gift card optimization, GPS payment, fintech, payment automation",
-  authors: [{ name: "PayYoyo Wallet Team" }],
-  creator: "PayYoyo Wallet",
-  publisher: "PayYoyo Wallet",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    title: "PayYoYo - AI-Powered Autonomous Payment Platform",
-    description: "Revolutionary AI-driven payment automation that eliminates payment friction forever. GPS-triggered intelligence optimizes gift card payments automatically.",
-    url: "https://PayYoYo.com",
-    siteName: "PayYoYo",
-    images: [
-      {
-        url: "https://PayYoyo Wallet.com/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "PayYoyo Wallet AI Payment Automation Platform",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "PayYoyo Wallet - AI-Powered Autonomous Payment Platform",
-    description: "Revolutionary AI-driven payment automation that eliminates payment friction forever. GPS-triggered intelligence optimizes gift card payments automatically.",
-    creator: "@PayYoyo Wallet",
-    images: ["https://PayYoyo Wallet.com/images/twitter-card.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "google-site-verification-code",
-    yandex: "yandex-verification-code",
-    yahoo: "yahoo-site-verification-code",
-  },
-};
+const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <title>PayYoYo - AI-Powered Autonomous Payment Platform | Save $720 Annually</title>
+        <meta name="description" content="Revolutionize payments with PayYoYo's AI-driven autonomous platform. Save $720/year with intelligent gift card optimization, GPS-enhanced spending, and zero-waste technology. Join millions using AI-powered payments." />
+        <meta name="keywords" content="AI payments, autonomous payments, gift card optimization, fintech, payment processing, AI finance, zero-waste payments, GPS payments" />
+        <meta name="author" content="AydenAIT Solutions" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://payyoyo.com/" />
+        <meta property="og:title" content="PayYoYo - AI-Powered Autonomous Payment Platform" />
+        <meta property="og:description" content="Save $720 annually with AI-driven autonomous payments. Eliminate $364B in global gift card waste through intelligent optimization." />
+        <meta property="og:image" content="https://payyoyo.com/og-image.jpg" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://payyoyo.com/" />
+        <meta property="twitter:title" content="PayYoYo - AI-Powered Autonomous Payment Platform" />
+        <meta property="twitter:description" content="Save $720 annually with AI-driven autonomous payments. Eliminate $364B in global gift card waste through intelligent optimization." />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "PayYoYo",
+              "description": "AI-powered autonomous payment platform revolutionizing payments with machine learning optimization",
+              "url": "https://payyoyo.com",
+              "founder": "AydenAIT Solutions",
+              "foundingDate": "2025",
+              "sameAs": [
+                "https://twitter.com/payyoyoapp",
+                "https://linkedin.com/company/payyoyo"
+              ],
+              "offers": {
+                "@type": "Service",
+                "name": "Autonomous Payment Platform",
+                "description": "AI-driven payment optimization saving users $720 annually"
+              }
+            })
+          }}
+        />
+      </head>
+      <body className={inter.className}>
         {children}
       </body>
     </html>
-  );
+  )
 }
