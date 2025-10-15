@@ -26,6 +26,75 @@ export default function JobDetailPage() {
 
   const jobs: Job[] = [
     {
+      id: 'ai-product-manager',
+      title: 'AI Product Manager',
+      location: 'Remote / Toronto',
+      type: 'Full-time',
+      department: 'Product',
+      shortDescription: 'Lead product strategy for AI-powered autonomous payment features...',
+      fullDescription: `PayYoyo is revolutionizing autonomous payments and eliminating $364B in global gift card waste annually. We're building the world's first truly autonomous payment system that uses cutting-edge AI to make intelligent financial decisions for millions of users.
+
+## What You'll Do
+
+As an AI Product Manager at PayYoyo, you will:
+• Lead product strategy for AI-powered autonomous payment features
+• Define product requirements for machine learning models in our payment optimization engine
+• Collaborate with data scientists and engineers to build AI-driven payment recommendations
+• Drive product roadmap for machine learning enhancements and user experience improvements
+• Analyze user behavior data to identify opportunities for AI-powered features
+• Partner with engineering teams to define APIs for AI model integration
+• Establish metrics and KPIs for AI feature performance and user engagement
+
+## Key Responsibilities
+• Lead product development for AI-powered payment optimization features
+• Work with ML engineers to translate product vision into technical requirements
+• Design user experiences for AI-driven payment recommendations
+• Analyze A/B test results and iterate on AI feature effectiveness
+• Coordinate cross-functional efforts for AI product releases
+• Build product strategy for AI adoption and user trust in automated decisions
+• Drive data-driven decisions for AI model improvements and feature prioritization
+
+## What a Typical Day Looks Like
+• Review user analytics to identify AI feature opportunities
+• Collaborate with data scientists on model performance and user impact
+• Iterate on product requirements based on ML model capabilities
+• Design wireframes and user flows for new AI-powered payment features
+• Analyze competitor offerings and industry trends in AI-powered payments
+• Present product roadmap and feature plans to executive leadership
+• Coordinate with engineering teams on sprint planning and feature delivery
+
+## What We're Looking For
+
+### Required Qualifications:
+• 5+ years product management experience, preferably in fintech or AI startups
+• Strong technical background with understanding of AI/ML concepts
+• Experience working with data science or machine learning teams
+• Experience with data-driven product development and analytics
+• Bachelor's degree in Computer Science, Business, or related field
+
+### Preferred Qualifications:
+• Portfolio of AI-powered product features you've launched
+• Experience with autonomous systems or recommendation engines
+• Knowledge of financial services and payment industry
+• MBA or Product Management certification
+• Experience with A/B testing and product experimentation
+
+## Why You'll Love Working Here
+• Lead product innovation at the forefront of AI-driven payments
+• Impact millions of users by optimizing their payment behavior
+• Work with cutting-edge AI technology in a fast-growing fintech startup
+• Competitive salary, equity, and benefits package
+• Flexible remote-first culture with Toronto office hub
+• Opportunity to shape the future of autonomous payment systems`,
+      requirements: [
+        '5+ years product management experience',
+        'Strong technical background in AI/ML',
+        'Experience with data-driven product development',
+        'Understanding of fintech and payment systems',
+        'MBA or equivalent product leadership experience'
+      ]
+    },
+    {
       id: 'senior-ai-ml-engineer',
       title: 'Senior AI/ML Engineer',
       location: 'Remote / Toronto',
