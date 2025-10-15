@@ -90,14 +90,24 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
           >
-            <Button size="lg" className="px-8 py-4 text-lg" onClick={handleGetEarlyAccess}>
-              Start Saving $720 Today →
-            </Button>
-            <Button variant="outline" size="lg" className="px-8 py-4 text-lg" onClick={handleWatchDemo}>
-              Watch 60-Second Demo
-            </Button>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button size="lg" className="px-10 py-5 text-lg font-bold shadow-2xl hover:shadow-[#1E40AF]/50" onClick={handleGetEarlyAccess}>
+                Start Saving $720 Today →
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button variant="outline" size="lg" className="px-10 py-5 text-lg font-semibold border-2 hover:bg-[#1E40AF] hover:text-white hover:border-[#1E40AF]" onClick={handleWatchDemo}>
+                Watch 60-Second Demo
+              </Button>
+            </motion.div>
           </motion.div>
 
           {/* Trust Indicators */}
