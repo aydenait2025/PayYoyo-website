@@ -303,17 +303,20 @@ print("Webhook Configured:", response.json())`
               Get your API keys and start building with autonomous payment technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+              <motion.a
+                href="#"
+                onClick={() => alert('API access form coming soon. Contact developers@payyoyo.com for early access.')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-[#1E40AF] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-300"
+                className="bg-white text-[#1E40AF] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-300 text-center cursor-pointer"
               >
                 Get API Access
-              </motion.button>
+              </motion.a>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#1E40AF] transition-colors duration-300"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 View Documentation
               </motion.button>
