@@ -25,7 +25,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative py-20 flex justify-center bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden">
+    <section className="relative py-32 flex justify-center bg-gradient-to-br from-white via-blue-50 to-indigo-100 overflow-hidden min-h-screen">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -36,7 +36,7 @@ export function Hero() {
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex items-center">
         <div className="text-center">
           {/* Main Headline */}
           <motion.div
