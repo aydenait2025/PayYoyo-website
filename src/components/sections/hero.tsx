@@ -93,10 +93,10 @@ export function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <Button size="lg" className="px-8 py-4 text-lg" onClick={handleGetEarlyAccess}>
-              Join 10,000+ Users on Our Waitlist
+              Start Saving $720 Today →
             </Button>
             <Button variant="outline" size="lg" className="px-8 py-4 text-lg" onClick={handleWatchDemo}>
-              See How It Works
+              Watch 60-Second Demo
             </Button>
           </motion.div>
 
