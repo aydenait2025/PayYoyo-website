@@ -47,15 +47,20 @@ export function Footer() {
                 Product
               </h4>
               <ul className="space-y-2">
-                {['Features', 'Security', 'API', 'Pricing'].map((item) => (
-                  <li key={item}>
+                {[
+                  { name: 'Features', href: '/features' },
+                  { name: 'Security', href: '/security' },
+                  { name: 'API', href: '/api' },
+                  { name: 'Pricing', href: '/pricing' }
+                ].map((item) => (
+                  <li key={item.name}>
                     <motion.a
-                      href="#"
+                      href={item.href}
                       className="group relative text-gray-600 hover:text-[#1E40AF] transition-all duration-300 text-sm"
                       whileHover={{ scale: 1.05, x: 2 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <span className="relative z-10">{item}</span>
+                      <span className="relative z-10">{item.name}</span>
                       <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#1E40AF] transition-all duration-300 group-hover:w-full"></span>
                     </motion.a>
                   </li>
