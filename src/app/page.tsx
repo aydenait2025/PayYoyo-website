@@ -8,13 +8,14 @@ import { Market } from '@/components/sections/market';
 import { Contact } from '@/components/sections/contact';
 
 export const metadata: Metadata = {
-  title: 'PayYoYo - AI-Powered Autonomous Payment Platform | Save $720 Annually',
-  description: 'Revolutionize payments with PayYoYo\'s AI-driven autonomous platform. Save $720/year with intelligent gift card optimization, GPS-enhanced spending, and zero-waste technology.',
-  keywords: ['AI payments', 'autonomous payments', 'gift card optimization', 'fintech'],
+  title: 'PayYoYo - Toronto AI Payment Platform | Save $720 Annually',
+  description: 'Toronto-based AI payment platform revolutionizing payments and saving users $720 annually. PayYoYo offers autonomous payment optimization with GPS-enhanced intelligence for Canadian users.',
+  keywords: ['Toronto AI payments', 'Canadian fintech', 'Ontario payment platform', 'Toronto gift card optimization', 'Canadian autonomous payments'],
   openGraph: {
-    title: 'PayYoYo - AI-Powered Autonomous Payment Platform',
-    description: 'Save $720 annually with AI-driven autonomous payments.',
+    title: 'PayYoYo - Toronto AI Payment Platform | Save $720 Annually',
+    description: 'Toronto-based AI payment platform saving Canadian users $720 annually with autonomous payment optimization.',
     url: 'https://payyoyo.com',
+    locale: 'en_CA',
     type: 'website'
   }
 }
