@@ -31,7 +31,7 @@ export default function FeaturesPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover the revolutionary features that make PayYoYo the world's first truly autonomous gift card payment platform, saving users $636 annually while delivering unparalleled convenience.
+              Discover the revolutionary features that make PayYoYo the world&apos;s first truly autonomous gift card payment platform, saving users $636 annually while delivering unparalleled convenience.
             </p>
           </motion.div>
         </div>
@@ -120,11 +120,11 @@ export default function FeaturesPage() {
                   </div>
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h4 className="font-medium text-gray-900 mb-2">🎯 Auto Popup by Location</h4>
-                    <p>Uses geofencing/BLE/merchant database to detect when you're near a store and suggest perfect cards.</p>
+                    <p>Uses geofencing/BLE/merchant database to detect when you&apos;re near a store and suggest perfect cards.</p>
                   </div>
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h4 className="font-medium text-gray-900 mb-2">⏰ Smart Reminder Engine</h4>
-                    <p>Reminders before expiration and when near eligible stores ("Use your last $2.45 at Tim Hortons!").</p>
+                    <p>Reminders before expiration and when near eligible stores (&quot;Use your last $2.45 at Tim Hortons!&quot;).</p>
                   </div>
                 </div>
               )}
