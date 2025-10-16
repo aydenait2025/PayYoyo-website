@@ -67,7 +67,7 @@ export default function PricingPage() {
   const faqs = [
     {
       question: 'How does the free trial work?',
-      answer: 'Start with a 30-day free trial that includes all Professional plan features. No credit card required. You'll get full access to our AI-powered payment optimization and can process up to 10,000 transactions during the trial period.'
+      answer: 'Start with a 30-day free trial that includes all Professional plan features. No credit card required. You\'ll get full access to our AI-powered payment optimization and can process up to 10,000 transactions during the trial period.'
     },
     {
       question: 'What happens after the trial ends?',
