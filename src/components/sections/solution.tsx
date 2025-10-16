@@ -183,7 +183,7 @@ export function Solution() {
                 Your Personal Gift Card Assistant
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                PayYoyo automatically finds the best gift cards to use when you're shopping. No more forgotten cards, no more manual searching - just seamless payments that save you money.
+                PayYoyo automatically finds the best gift cards to use when you&apos;re shopping. No more forgotten cards, no more manual searching - just seamless payments that save you money.
               </p>
             </motion.div>
           </header>
@@ -253,7 +253,7 @@ export function Solution() {
                 <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
                 <div className="flex-1">
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">Smart Notification</h4>
-                  <p className="text-gray-600">App pops up: "You have $25.50 left on your Starbucks card — tap to scan."</p>
+                  <p className="text-gray-600">App pops up: &quot;You have $25.50 left on your Starbucks card — tap to scan.&quot;</p>
                   <div className="bg-gray-50 p-4 rounded-lg mt-2">
                     <div className="flex items-center space-x-3">
                       <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
@@ -261,7 +261,7 @@ export function Solution() {
                       </div>
                       <div className="text-sm">
                         <p className="font-medium text-gray-900">You have $25.50 left on your Starbucks card — tap to scan</p>
-                        <p className="text-gray-500 text-xs">Expires Mar 2026 • You'll save $2.85</p>
+                        <p className="text-gray-500 text-xs">Expires Mar 2026 • You&apos;ll save $2.85</p>
                       </div>
                     </div>
                   </div>
@@ -509,7 +509,7 @@ export function Solution() {
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      When you're near a store, PayYoyo automatically detects your location and scans all your gift cards. It instantly finds the best combination to use for your purchase, then you just tap to confirm. It's like having a personal assistant who never forgets your gift cards.
+                      When you&apos;re near a store, PayYoyo automatically detects your location and scans all your gift cards. It instantly finds the best combination to use for your purchase, then you just tap to confirm. It&apos;s like having a personal assistant who never forgets your gift cards.
                     </div>
                   </div>
                 </div>
@@ -520,7 +520,7 @@ export function Solution() {
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Other payment apps require you to manually search and select gift cards. PayYoyo does everything automatically using AI and your phone's location. No more forgotten cards or manual searching - just seamless payments that save you money.
+                      Other payment apps require you to manually search and select gift cards. PayYoyo does everything automatically using AI and your phone&apos;s location. No more forgotten cards or manual searching - just seamless payments that save you money.
                     </div>
                   </div>
                 </div>
@@ -542,7 +542,7 @@ export function Solution() {
                   </h3>
                   <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                     <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      We're currently testing with a small group of users and merchants. Join our waitlist to get early access as soon as we launch. We want to make sure everything works perfectly before making it available to everyone.
+                      We&apos;re currently testing with a small group of users and merchants. Join our waitlist to get early access as soon as we launch. We want to make sure everything works perfectly before making it available to everyone.
                     </div>
                   </div>
                 </div>
