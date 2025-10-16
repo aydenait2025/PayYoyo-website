@@ -108,7 +108,7 @@ export function Market() {
               Massive Market Opportunity
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              The gift card industry is huge, but most cards go unused. We're solving a real problem that affects millions of people and costs billions every year.
+              The gift card industry is huge, but most cards go unused. We&apos;re solving a real problem that affects millions of people and costs billions every year.
             </p>
           </motion.div>
         </div>
@@ -242,9 +242,9 @@ export function Market() {
           className="bg-gradient-to-r from-[#1E40AF] to-[#3730A3] rounded-2xl p-12 text-white"
         >
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Why We're Different</h3>
+            <h3 className="text-3xl font-bold mb-4">Why We&apos;re Different</h3>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
-              We're building something unique that solves real problems in a way no one else can match.
+              We&apos;re building something unique that solves real problems in a way no one else can match.
             </p>
           </div>
 

@@ -61,7 +61,7 @@ export function Hero() {
             className="mb-4"
           >
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our smart gift card wallet automatically pops up when you're near a store, shows you what cards you have available, and saves you money by using the best one first.
+              Our smart gift card wallet automatically pops up when you&apos;re near a store, shows you what cards you have available, and saves you money by using the best one first.
             </p>
           </motion.div>
 
