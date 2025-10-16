@@ -109,7 +109,7 @@ export default function FeaturesPage() {
                   {feature.icon}
                 </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}
+              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
 
               {/* Add detailed feature descriptions based on core features */}
               {feature.title === 'AI Autonomous Payments' && (
@@ -137,7 +137,7 @@ export default function FeaturesPage() {
                   </div>
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <h4 className="font-medium text-gray-900 mb-2">🏪 Merchant Integration</h4>
-                    <p>Increase redemption rates from <50% to 90%, faster checkout times, repeat visits.</p>
+                    <p>{`Increase redemption rates from <50% to 90%, faster checkout times, repeat visits.`}</p>
                   </div>
                 </div>
               )}
@@ -162,7 +162,7 @@ export default function FeaturesPage() {
                     <p>Enterprise-grade security with end-to-end encryption for all card data.</p>
                   </div>
                 </div>
-              )}</p>
+              )}
               </motion.div>
             ))}
           </div>
