@@ -1,8 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Static export config (commented for local dev)
-  // output: 'export',
-  // trailingSlash: true,
+import type { NextConfig } from 'next';
+import type { Configuration } from 'webpack';
+
+const nextConfig: NextConfig = {
+  reactStrictMode: true, // optional, but recommended
 
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -25,6 +25,26 @@ const nextConfig = {
   // Enable SWC minification and other optimizations
   compiler: {
     removeConsole: false, // Keep console logs for development
+  },
+
+  webpack: (config: Configuration, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
+    // Production optimizations
+    if (!dev && !isServer) {
+      if (config.optimization && config.optimization.splitChunks) {
+        config.optimization.splitChunks.cacheGroups = {
+          default: false,
+          vendors: false,
+          // example: create a custom cache group
+          commons: {
+            name: 'commons',
+            chunks: 'all',
+            minChunks: 2,
+          },
+        };
+      }
+    }
+
+    return config;
   },
 
   // Remove headers for local dev (uncommented for production)
