@@ -87,7 +87,7 @@ export default function PricingPage() {
     },
     {
       question: 'Do you offer refunds?',
-      answer: 'We offer a 30-day money-back guarantee on all paid plans. If you\'re not completely satisfied with PayYoYo within the first 30 days, we\'ll provide a full refund, no questions asked.'
+      answer: `We offer a 30-day money-back guarantee on all paid plans. If you're not completely satisfied with PayYoYo within the first 30 days, we'll provide a full refund, no questions asked.`
     }
   ];
 
