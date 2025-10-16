@@ -27,25 +27,7 @@ const nextConfig: NextConfig = {
     removeConsole: false, // Keep console logs for development
   },
 
-  webpack: (config: Configuration, { dev, isServer }: { dev: boolean; isServer: boolean }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      if (config.optimization && config.optimization.splitChunks) {
-        config.optimization.splitChunks.cacheGroups = {
-          default: false,
-          vendors: false,
-          // example: create a custom cache group
-          commons: {
-            name: 'commons',
-            chunks: 'all',
-            minChunks: 2,
-          },
-        };
-      }
-    }
 
-    return config;
-  },
 
   // Remove headers for local dev (uncommented for production)
   // async headers() {
