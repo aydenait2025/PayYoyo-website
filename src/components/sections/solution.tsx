@@ -19,27 +19,7 @@ interface Feature {
   color: string;
 }
 
-// Constants extracted for reusability and maintainability
-const STEPS: Step[] = [
-  {
-    step: '01',
-    title: 'Smart Location Detection',
-    description: 'When you arrive near a store, our app automatically detects where you are and identifies participating merchants.',
-    icon: 'location',
-  },
-  {
-    step: '02',
-    title: 'Instant Card Analysis',
-    description: 'Our AI quickly scans all your gift cards and calculates the best combination to maximize savings.',
-    icon: 'ai',
-  },
-  {
-    step: '03',
-    title: 'One-Tap Payment',
-    description: 'Review and confirm - that\'s it! Your payment is processed instantly with optimal card usage.',
-    icon: 'payment',
-  },
-];
+
 
 const FEATURES: Feature[] = [
   {
