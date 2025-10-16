@@ -10,18 +10,19 @@ export default function APIPage() {
 
   const codeExamples = {
     overview: `# PayYoYo API Overview
-# Autonomous Payment Platform API
+# GPS-Enhanced Gift Card Payment API
 
 # Base URL: https://api.payyoyo.com/v1
 # Authentication: Bearer Token Required
 # Rate Limits: 1000 requests/hour per API key
 
 # Key Endpoints:
-/payments          # Create and manage payments
-/transactions      # View transaction history
-/optimization      # Get AI optimization recommendations
-/webhooks          # Configure event notifications
-/accounts         # Manage merchant accounts`,
+/wallet/payment-methods    # Get available payment methods for location
+/wallet/gift-cards        # Manage gift cards by store
+/payments/initiate        # Initiate payment with AI selection
+/payments/confirm         # Confirm and process payment
+/transactions             # View transaction history
+/webhooks                 # Configure event notifications`,
 
     authentication: `# API Authentication Example
 import requests
@@ -39,7 +40,7 @@ headers = {
 response = requests.get(f'{BASE_URL}/accounts', headers=headers)
 print(response.json())`,
 
-    payments: `# Create Autonomous Payment
+    payments: `# Initiate GPS-Based Payment Selection
 import requests
 
 API_KEY = 'your_api_key_here'
@@ -50,27 +51,85 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-# Create payment with AI optimization enabled
+# Step 1: Get available payment methods for location
+location_data = {
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "merchant_name": "Starbucks"
+}
+
+methods = requests.post(
+    f'{BASE_URL}/wallet/payment-methods',
+    json=location_data,
+    headers=headers
+)
+
+# Step 2: Initiate payment with AI selection
 payment_data = {
-    "amount": 50.00,
+    "amount": 25.99,
     "currency": "CAD",
-    "merchant_id": "MERCHANT_123",
-    "customer_id": "CUSTOMER_456",
-    "autonomous_mode": True,  # Enable AI optimization
-    "location": {
-        "lat": 43.6532,
-        "lng": -79.3832
-    },
-    "payment_methods": ["visa", "mastercard", "gift_card"]
+    "merchant_name": "Starbucks",
+    "location": location_data,
+    "auto_select": True  # AI chooses optimal gift card or fallback to credit
 }
 
 response = requests.post(
-    f'{BASE_URL}/payments',
+    f'{BASE_URL}/payments/initiate',
     json=payment_data,
     headers=headers
 )
 
-print("Payment Created:", response.json())`,
+# Step 3: Confirm payment
+confirm_data = {
+    "payment_token": response.json()["payment_token"],
+    "user_approval": True
+}
+
+confirm = requests.post(
+    f'{BASE_URL}/payments/confirm',
+    json=confirm_data,
+    headers=headers
+)
+
+print("Payment Processed:", confirm.json())`,
+
+    merchants: `# Merchant Integration Steps
+
+## 1. Store Location Registration
+# Register your store locations for GPS-based detection
+store_data = {
+    "merchant_name": "Starbucks",
+    "locations": [
+        {
+            "store_id": "STARBUCKS_001",
+            "address": "123 Main St, Toronto",
+            "lat": 43.6532,
+            "lng": -79.3832,
+            "category": "coffee"
+        }
+    ],
+    "gift_card_program": True
+}
+
+# 2. Merchant Dashboard Setup
+# Configure payment terminals and checkout integration
+terminal_config = {
+    "terminal_id": "TERM_123",
+    "store_id": "STARBUCKS_001",
+    "capabilities": ["gift_card_payment", "credit_card_fallback"]
+}
+
+# 3. Transaction Processing
+# Merchants receive instant notifications and process payments
+# No additional setup required - PayYoYo handles everything
+
+print("Merchant enrolled successfully")
+
+# Revenue Benefits:
+# - Increased gift card redemption (currently <50%)
+# - Faster checkout times
+# - Repeat customer visits
+# - Reduced payment friction`,
 
     webhooks: `# Webhook Configuration
 import requests
@@ -130,7 +189,7 @@ print("Webhook Configured:", response.json())`
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Build with our comprehensive API to integrate autonomous payment capabilities into your applications. Access real-time transaction data, AI optimization insights, and seamless payment processing.
+              Build GPS-enhanced gift card payment capabilities similar to Apple Pay or Google Pay. Access location-aware payment methods, automatic gift card selection by store, and intelligent credit card fallbacks.
             </p>
           </motion.div>
         </div>
@@ -149,12 +208,13 @@ print("Webhook Configured:", response.json())`
 
             {/* Tab Navigation */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {[
-                { id: 'overview', label: 'Overview', icon: '📚' },
-                { id: 'authentication', label: 'Authentication', icon: '🔐' },
-                { id: 'payments', label: 'Payments', icon: '💳' },
-                { id: 'webhooks', label: 'Webhooks', icon: '🪝' }
-              ].map((tab) => (
+                  {[
+                    { id: 'overview', label: 'Overview', icon: '📚' },
+                    { id: 'authentication', label: 'Authentication', icon: '🔐' },
+                    { id: 'payments', label: 'Payments', icon: '💳' },
+                    { id: 'merchants', label: 'For Merchants', icon: '🏪' },
+                    { id: 'webhooks', label: 'Webhooks', icon: '🪝' }
+                  ].map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
@@ -258,13 +318,13 @@ print("Webhook Configured:", response.json())`
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {[
-                    { endpoint: '/payments', method: 'POST', description: 'Create new payment with AI optimization', rateLimit: '100/min' },
+                    { endpoint: '/wallet/payment-methods', method: 'POST', description: 'Get available payment methods for location', rateLimit: '100/min' },
+                    { endpoint: '/wallet/gift-cards', method: 'GET', description: 'List and manage gift cards by store', rateLimit: '200/min' },
+                    { endpoint: '/payments/initiate', method: 'POST', description: 'Initiate payment with AI selection', rateLimit: '100/min' },
+                    { endpoint: '/payments/confirm', method: 'POST', description: 'Confirm and process payment', rateLimit: '100/min' },
                     { endpoint: '/payments/{id}', method: 'GET', description: 'Retrieve payment details', rateLimit: '500/min' },
-                    { endpoint: '/transactions', method: 'GET', description: 'List merchant transactions', rateLimit: '200/min' },
-                    { endpoint: '/optimization', method: 'POST', description: 'Get AI spending recommendations', rateLimit: '50/min' },
-                    { endpoint: '/webhooks', method: 'POST', description: 'Configure webhook endpoints', rateLimit: '10/min' },
-                    { endpoint: '/accounts', method: 'GET', description: 'Get account information', rateLimit: '100/min' },
-                    { endpoint: '/reports', method: 'GET', description: 'Generate transaction reports', rateLimit: '20/min' }
+                    { endpoint: '/transactions', method: 'GET', description: 'View transaction history', rateLimit: '200/min' },
+                    { endpoint: '/webhooks', method: 'POST', description: 'Configure event notifications', rateLimit: '10/min' }
                   ].map((endpoint, index) => (
                     <tr key={index} className="hover:bg-gray-50">
                       <td className="px-6 py-4 text-sm font-mono text-gray-900">{endpoint.endpoint}</td>

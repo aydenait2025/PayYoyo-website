@@ -208,60 +208,140 @@ export function Solution() {
             </motion.div>
           </header>
 
-        {/* How It Works */}
-        <div className="mb-20">
+        {/* User Flow Demo */}
+        <section className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">How PayYoyo Wallet Works</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Seamless automation in three simple steps</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Real-Life Example</h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">See PayYoyo in action with this everyday scenario</p>
           </motion.div>
 
-          {/* Steps Flow */}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-            {STEPS.map((step: Step, index: number) => (
-              <React.Fragment key={step.step}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 }}
-                  className="text-center bg-gray-50 rounded-xl p-8 min-w-[280px] relative"
-                >
-                  <div className="w-16 h-16 bg-[#1E40AF] text-white rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <Icon name={step.icon} />
+          {/* Timeline Flow */}
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-6">
+              {/* Step 1: Setup */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="flex items-center space-x-4 bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500"
+              >
+                <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Setup Cards</h4>
+                  <p className="text-gray-600">User adds Starbucks, Walmart, and Best Buy cards. App automatically syncs balances.</p>
+                  <div className="flex items-center space-x-2 mt-2 text-sm text-green-600">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>• Starbucks: $25.50 • Walmart: $47.80 • Best Buy: $89.20</span>
                   </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">{step.title}</h4>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                </motion.div>
-                {/* Arrow between steps on larger screens */}
-                {index < STEPS.length - 1 && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 + 0.3 }}
-                    className="hidden lg:block text-[#1E40AF] text-4xl font-light"
-                  >
-                    →
-                  </motion.div>
-                )}
-                {/* Vertical arrow between steps on mobile */}
-                {index < STEPS.length - 1 && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: ANIMATION_CONFIG.duration, delay: index * 0.2 + 0.3 }}
-                    className="lg:hidden text-[#1E40AF] text-3xl font-light flex justify-center"
-                  >
-                    ↓
-                  </motion.div>
-                )}
-              </React.Fragment>
-            ))}
+                </div>
+              </motion.div>
+
+              {/* Step 2: Location Detection */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="flex items-center space-x-4 bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500"
+              >
+                <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Location Detection</h4>
+                  <p className="text-gray-600">User walks into Starbucks. App detects location via GPS/geofencing.</p>
+                  <div className="flex items-center space-x-2 mt-2 text-sm text-green-600">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>• Starbucks detected 1.2km away • GPS active</span>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 3: Smart Popup */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex items-center space-x-4 bg-white p-6 rounded-xl shadow-sm border-l-4 border-purple-500"
+              >
+                <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Smart Notification</h4>
+                  <p className="text-gray-600">App pops up: "You have $25.50 left on your Starbucks card — tap to scan."</p>
+                  <div className="bg-gray-50 p-4 rounded-lg mt-2">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">💳</span>
+                      </div>
+                      <div className="text-sm">
+                        <p className="font-medium text-gray-900">You have $25.50 left on your Starbucks card — tap to scan</p>
+                        <p className="text-gray-500 text-xs">Expires Mar 2026 • You'll save $2.85</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Step 4: Payment & Recording */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="flex items-center space-x-4 bg-white p-6 rounded-xl shadow-sm border-l-4 border-orange-500"
+              >
+                <div className="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-lg">4</div>
+                <div className="flex-1">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Automatic Payment</h4>
+                  <p className="text-gray-600">User scans barcode at POS → balance updated automatically ($25.50 → $22.08).</p>
+                  <div className="bg-blue-50 p-4 rounded-lg mt-2">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm">✓</span>
+                      </div>
+                      <div className="text-sm">
+                        <p className="font-medium text-gray-900">Transaction recorded: $3.42 coffee purchase</p>
+                        <p className="text-gray-500 text-xs">Starbucks Balance: $22.08 (${"$"}3.42 used)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Savings Summary */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="mt-8 bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-xl p-8 text-center text-white"
+            >
+              <h4 className="text-2xl font-bold mb-4">Result: Money Saved!</h4>
+              <p className="text-xl opacity-90">User saves $2.85 vs paying with credit card (typically earns 11% cashback)</p>
+              <div className="grid grid-cols-3 gap-6 mt-6">
+                <div>
+                  <p className="text-3xl font-bold">$2.85</p>
+                  <p className="text-sm opacity-75">Savings Today</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">636</p>
+                  <p className="text-sm opacity-75">Annual Savings</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-bold">-50%</p>
+                  <p className="text-sm opacity-75">Card Waste</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
+
+
 
         {/* Why PayYoyo */}
         <section className="mb-20">
@@ -304,12 +384,17 @@ export function Solution() {
               <div className="text-6xl mb-6">🚀</div>
               <h4 className="text-2xl font-bold text-gray-900 mb-6">For Merchants</h4>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                More sales, seamless redemption. With PayYoyo, retailers like Walmart, Best Buy, and Esso grow gift card sales through exclusive partnerships, effortless redemption, and happier, repeat customers.
+                Boost revenue through seamless gift card redemption. PayYoyo increases redemption rates from current industry average to 90%+, drives repeat visits through personalized offers, and reduces checkout times by 70%.
               </p>
               <div className="bg-white rounded-lg p-4 shadow-sm">
-                <p className="text-sm text-gray-600">
-                  <strong className="text-green-600">Merchant Benefits:</strong> Increased redemption, faster checkout, better customer experience
-                </p>
+                <h5 className="text-lg font-semibold text-green-600 mb-3">Merchant Benefits:</h5>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• <strong>$364B</strong> global gift card market opportunity</li>
+                  <li>• <strong>50-90%</strong> increase in redemption rates</li>
+                  <li>• <strong>70%</strong> faster checkout times</li>
+                  <li>• <strong>25%</strong> more repeat customer visits</li>
+                  <li>• Higher customer satisfaction scores</li>
+                </ul>
               </div>
             </motion.div>
           </div>

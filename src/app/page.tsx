@@ -8,12 +8,12 @@ import { Market } from '@/components/sections/market';
 import { Contact } from '@/components/sections/contact';
 
 export const metadata: Metadata = {
-  title: 'PayYoYo - Toronto AI Payment Platform | Save $720 Annually',
-  description: 'Toronto-based AI payment platform revolutionizing payments and saving users $720 annually. PayYoYo offers autonomous payment optimization with GPS-enhanced intelligence for Canadian users.',
-  keywords: ['Toronto AI payments', 'Canadian fintech', 'Ontario payment platform', 'Toronto gift card optimization', 'Canadian autonomous payments'],
+  title: 'PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually',
+  description: 'AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually, featuring automatic card selection, zero balance archive, and merchant-favored redemption.',
+  keywords: ['AI payment wallet', 'GPS-triggered payments', 'gift card optimization', 'Apple Pay alternative', 'Google Pay competitor', 'merchant analytics', 'smart wallet'],
   openGraph: {
-    title: 'PayYoYo - Toronto AI Payment Platform | Save $720 Annually',
-    description: 'Toronto-based AI payment platform saving Canadian users $720 annually with autonomous payment optimization.',
+    title: 'PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually',
+    description: 'AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics.',
     url: 'https://payyoyo.com',
     locale: 'en_CA',
     type: 'website'

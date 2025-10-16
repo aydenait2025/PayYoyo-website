@@ -14,13 +14,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <title>PayYoYo - AI-Powered Autonomous Payment Platform | Save $720 Annually</title>
-        <meta name="description" content="Toronto-based AI payment platform revolutionizing payments and saving users $720 annually. PayYoYo offers autonomous payment optimization with GPS-enhanced intelligence for Canadian users." />
+        <title>PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually</title>
+        <meta name="description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually, featuring automatic card selection, zero balance.archive, and merchant-favored redemption." />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Toronto" />
         <meta name="geo.position" content="43.6532;-79.3832" />
         <meta name="ICBM" content="43.6532, -79.3832" />
-        <meta name="keywords" content="AI payments, autonomous payments, gift card optimization, fintech, payment processing, AI finance, zero-waste payments, GPS payments" />
+        <meta name="keywords" content="AI payment wallet, GPS-triggered payments, gift card optimization, Apple Pay alternative, Google Pay competitor, merchant analytics, smart wallet, digital payments" />
         <meta name="author" content="AydenAIT Solutions" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,15 +28,15 @@ export default function RootLayout({
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://payyoyo.com/" />
-        <meta property="og:title" content="PayYoYo - AI-Powered Autonomous Payment Platform" />
-        <meta property="og:description" content="Save $720 annually with AI-driven autonomous payments. Eliminate $364B in global gift card waste through intelligent optimization." />
+        <meta property="og:title" content="PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually" />
+        <meta property="og:description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics." />
         <meta property="og:image" content="https://payyoyo.com/og-image.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://payyoyo.com/" />
-        <meta property="twitter:title" content="PayYoYo - AI-Powered Autonomous Payment Platform" />
-        <meta property="twitter:description" content="Save $720 annually with AI-driven autonomous payments. Eliminate $364B in global gift card waste through intelligent optimization." />
+        <meta property="twitter:title" content="PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually" />
+        <meta property="twitter:description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics." />
 
         {/* Local SEO Structured Data */}
         <script
@@ -95,8 +95,8 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": "https://payyoyo.com/#website",
                   "url": "https://payyoyo.com",
-                  "name": "PayYoYo - AI-Powered Autonomous Payment Platform",
-                  "description": "Save $720 annually with AI-driven autonomous payments. Eliminate $364B in global gift card waste.",
+                  "name": "PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually",
+                  "description": "AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics.",
                   "publisher": {
                     "@id": "https://payyoyo.com/#organization"
                   },
@@ -110,7 +110,7 @@ export default function RootLayout({
                   "@type": "WebPage",
                   "@id": "https://payyoyo.com/#webpage",
                   "url": "https://payyoyo.com",
-                  "name": "PayYoYo - Toronto AI Payment Platform | Save $720 Annually",
+                  "name": "PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually",
                   "isPartOf": {
                     "@id": "https://payyoyo.com/#website"
                   },

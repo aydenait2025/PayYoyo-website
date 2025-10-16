@@ -6,8 +6,7 @@ export function Problem() {
   const problems = [
     {
       title: '$15.2B Annual Waste',
-      description: '51% of gift cards go unspent - Americans lose $53/month, totaling $15.2 billion wasted annually.'
-      stat: '$15.2B',
+      description: '51% of gift cards go unspent - Americans lose $53/month, totaling $15.2 billion wasted annually.',
       stat: '$15.2B',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,25 +51,25 @@ export function Problem() {
   ];
 
   return (
-    <section id="problem" className="py-24 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="text-center mb-20">
+    <section id="problem" className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               The Hidden Gift Card Problem
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Most people have gift cards they've completely forgotten about. The average person wastes $53 every month on unused gift cards - that's money just sitting there, unused.
             </p>
           </motion.div>
         </div>
 
         {/* Problem Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {problems.map((problem, index) => (
             <motion.div
               key={problem.title}
@@ -91,31 +90,7 @@ export function Problem() {
           ))}
         </div>
 
-        {/* Bottom Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center bg-white rounded-2xl p-8 shadow-xl"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#1E40AF] mb-2">51%</div>
-              <p className="text-gray-600 text-sm">Cards Never Redeemed</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#1E40AF] mb-2">$53</div>
-              <p className="text-gray-600 text-sm">Monthly Waste Per Person</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-[#1E40AF] mb-2">$127</div>
-              <p className="text-gray-600 text-sm">Average Value Per Unused Card</p>
-            </div>
-          </div>
-          <div className="mt-8 text-gray-500 text-sm">
-            Sources: Consumer Reports, Statista, Nielsen Gift Card Study
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export default function FeaturesPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover the revolutionary features that make PayYoYo the world's first truly autonomous gift card payment platform, saving users $720 annually while delivering unparalleled convenience.
+              Discover the revolutionary features that make PayYoYo the world's first truly autonomous gift card payment platform, saving users $636 annually while delivering unparalleled convenience.
             </p>
           </motion.div>
         </div>
@@ -49,7 +49,7 @@ export default function FeaturesPage() {
                   </svg>
                 ),
                 title: 'AI Autonomous Payments',
-                description: 'Proprietary AI analyzes 50+ million transactions to automatically optimize your gift card spending patterns, saving you up to $720 annually.'
+                description: 'Proprietary AI analyzes 50+ million transactions to automatically optimize your gift card spending patterns, saving you up to $636 annually.'
               },
               {
                 icon: (
@@ -108,8 +108,61 @@ export default function FeaturesPage() {
                 <div className="w-16 h-16 bg-[#1E40AF]/10 text-[#1E40AF] rounded-xl flex items-center justify-center mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed">{feature.description}
+
+              {/* Add detailed feature descriptions based on core features */}
+              {feature.title === 'AI Autonomous Payments' && (
+                <div className="mt-4 space-y-2 text-sm">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">☑️ Smart Gift Card Wallet</h4>
+                    <p>Store all physical and digital gift cards (barcode, QR, card number). Sync balances via APIs or web scraping.</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">🎯 Auto Popup by Location</h4>
+                    <p>Uses geofencing/BLE/merchant database to detect when you're near a store and suggest perfect cards.</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">⏰ Smart Reminder Engine</h4>
+                    <p>Reminders before expiration and when near eligible stores ("Use your last $2.45 at Tim Hortons!").</p>
+                  </div>
+                </div>
+              )}
+
+              {feature.title === 'GPS-Enhanced Intelligence' && (
+                <div className="mt-4 space-y-2 text-sm">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">📊 Transaction Tracking</h4>
+                    <p>Auto-deduction from balances, spending summaries by brand/category/month.</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">🏪 Merchant Integration</h4>
+                    <p>Increase redemption rates from <50% to 90%, faster checkout times, repeat visits.</p>
+                  </div>
+                </div>
+              )}
+
+              {feature.title === 'Zero-Waste Technology' && (
+                <div className="mt-4 space-y-2 text-sm">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">🎯 Smart Card Selection</h4>
+                    <p>Prioritizes expiring cards first, then smallest balances, maximizes utility.</p>
+                  </div>
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">❌ Auto Archive</h4>
+                    <p>Zero-balance cards automatically archived by store for clutter-free experience.</p>
+                  </div>
+                </div>
+              )}
+
+              {feature.title === 'Bank-Level Security' && (
+                <div className="mt-4 space-y-2 text-sm">
+                  <div className="bg-gray-50 p-3 rounded-lg">
+                    <h4 className="font-medium text-gray-900 mb-2">🔐 PCI DSS Level 1</h4>
+                    <p>Enterprise-grade security with end-to-end encryption for all card data.</p>
+                  </div>
+                </div>
+              )}</p>
               </motion.div>
             ))}
           </div>
@@ -128,7 +181,7 @@ export default function FeaturesPage() {
               Ready to Experience Autonomous Payments?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join millions of users saving $720 annually with AI-powered payment optimization.
+              Join millions of users saving $636 annually with AI-powered payment optimization.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
