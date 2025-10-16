@@ -27,30 +27,6 @@ const nextConfig = {
     removeConsole: false, // Keep console logs for development
   },
 
-  // Enable webpack optimizations
-  webpack: (config, { dev, isServer }) => {
-    // Production optimizations
-    if (!dev && !isServer) {
-      config.optimization.splitChunks.cacheGroups = {
-        ...config.optimization.splitChunks.cacheGroups,
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-          priority: 10,
-        },
-        framer: {
-          test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
-          name: 'framer-motion',
-          chunks: 'all',
-          priority: 20,
-        },
-      };
-    }
-
-    return config;
-  },
-
   // Remove headers for local dev (uncommented for production)
   // async headers() {
   //   return [
