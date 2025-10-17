@@ -23,18 +23,18 @@ interface Feature {
 
 const FEATURES: Feature[] = [
   {
-    title: 'Your Cards Are Safe',
-    description: 'Bank-level security keeps your gift cards and payments completely protected.',
+    title: 'Proactive Location Reminders',
+    description: 'GPS-triggered notifications when near stores where you have gift cards. Never forget to use your cards again.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
     color: 'bg-blue-100 text-blue-600',
   },
   {
-    title: 'Smart Card Selection',
-    description: 'AI automatically finds the best gift cards to use for maximum savings.',
+    title: 'AI-Powered Optimal Selection',
+    description: 'Smart engine analyzes expiration dates, balances, and merchant restrictions to recommend the best card for maximum savings.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -43,14 +43,24 @@ const FEATURES: Feature[] = [
     color: 'bg-purple-100 text-purple-600',
   },
   {
-    title: 'Lightning Fast',
-    description: 'Instant processing means no waiting at checkout - just seamless payments.',
+    title: 'Smart Waste Prevention',
+    description: 'Weekly expiration alerts, low balance warnings, and suggestions to consolidate or transfer cards before they expire.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.864-.833-2.634 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+      </svg>
+    ),
+    color: 'bg-green-100 text-green-600',
+  },
+  {
+    title: 'One-Tap Fast Payment',
+    description: 'Enter a store → get card recommendation → one tap to scan barcode. Complete transaction in under 30 seconds.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    color: 'bg-green-100 text-green-600',
+    color: 'bg-orange-100 text-orange-600',
   },
 ];
 
@@ -323,7 +333,9 @@ export function Solution() {
 
 
 
-        {/* Why PayYoyo */}
+
+
+        {/* Core Value Proposition */}
         <section className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -331,53 +343,143 @@ export function Solution() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h3 className="text-3xl font-bold text-gray-900 mb-8">Why PayYoyo?</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+              Not Just a Wallet — Your Smart Gift Card Manager
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              PayYoyo transforms static gift card storage into an intelligent, proactive system that actively works for you.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* For Customers */}
+          {/* Value Proposition Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 text-center"
+              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 text-center relative overflow-hidden"
             >
-              <div className="text-6xl mb-6">💡</div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">For Customers</h4>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Smarter gift cards. Never let a balance go to waste. PayYoyo helps you save money, time, and frustration with AI-powered gift card management. One wallet, every store — always the right card, at the right time.
-              </p>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <p className="text-sm text-gray-600">
-                  <strong className="text-blue-600">Customer Value:</strong> Avoid waste, save money/time, get discount gift cards
+              <div className="absolute top-0 right-0 w-20 h-20 bg-blue-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">📍</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Location Awareness</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  GPS-triggered recommendations when you enter stores. No more forgetting to use your cards.
                 </p>
               </div>
             </motion.div>
 
-            {/* For Merchants */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center"
+              className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 text-center relative overflow-hidden"
             >
-              <div className="text-6xl mb-6">🚀</div>
-              <h4 className="text-2xl font-bold text-gray-900 mb-6">For Merchants</h4>
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Boost revenue through seamless gift card redemption. PayYoyo increases redemption rates from current industry average to 90%+, drives repeat visits through personalized offers, and reduces checkout times by 70%.
-              </p>
-              <div className="bg-white rounded-lg p-4 shadow-sm">
-                <h5 className="text-lg font-semibold text-green-600 mb-3">Merchant Benefits:</h5>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• <strong>$364B</strong> global gift card market opportunity</li>
-                  <li>• <strong>50-90%</strong> increase in redemption rates</li>
-                  <li>• <strong>70%</strong> faster checkout times</li>
-                  <li>• <strong>25%</strong> more repeat customer visits</li>
-                  <li>• Higher customer satisfaction scores</li>
-                </ul>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-purple-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">🧠</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Smart Recommendations</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  AI analyzes expiration dates, balances, and merchant restrictions to suggest optimal cards.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-20 h-20 bg-green-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">🛡️</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Waste Prevention</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Weekly alerts for expiring cards, low balance warnings, and consolidation suggestions.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-20 h-20 bg-orange-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">⚡</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Rapid Payments</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  One-tap barcode scanning completes transactions in under 30 seconds.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-xl p-8 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-20 h-20 bg-teal-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">💰</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Maximum Savings</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Prioritizes expiring cards and maximizes value to minimize waste and save money.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-8 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-20 h-20 bg-pink-200 rounded-full -translate-y-10 translate-x-10 opacity-20"></div>
+              <div className="relative">
+                <div className="text-4xl mb-4">🔄</div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Zero Friction</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Seamless experience from location detection to payment completion - no manual work required.
+                </p>
               </div>
             </motion.div>
           </div>
+
+          {/* Core Mission Statement */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 md:p-12 text-center text-white"
+          >
+            <h4 className="text-2xl font-bold mb-4">Our Mission</h4>
+            <p className="text-xl opacity-90 mb-6">
+              Transform gift card management from a passive storage problem into an intelligent, automated solution that actively saves you money and time.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div>
+                <p className="text-3xl font-bold">$636</p>
+                <p className="text-sm opacity-75">Average Annual Savings</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold">50%</p>
+                <p className="text-sm opacity-75">Reduction in Card Waste</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold">30s</p>
+                <p className="text-sm opacity-75">Average Transaction Time</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold">90%+</p>
+                <p className="text-sm opacity-75">Card Utilization Rate</p>
+              </div>
+            </div>
+          </motion.div>
         </section>
 
         {/* Key Features */}
@@ -394,7 +496,7 @@ export function Solution() {
             <h3 id="features-heading" className="text-2xl font-bold text-center text-gray-900 mb-12">
               Key Features
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {FEATURES.map((feature: Feature, index: number) => (
                 <motion.div
                   key={feature.title}
@@ -488,81 +590,9 @@ export function Solution() {
           </div>
         </motion.div>
 
-        {/* FAQ Schema for Featured Snippets */}
-        <section className="mb-20" itemScope itemType="https://schema.org/FAQPage">
-          <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-                Frequently Asked Questions
-              </h2>
-              <meta itemProp="name" content="PayYoyo Wallet AI Payment Automation FAQs" />
-              <meta itemProp="description" content="Answers to common questions about AI-powered autonomous payments, GPS-triggered automation, and gift card optimization." />
 
-              <div className="space-y-6 max-w-4xl mx-auto">
-                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    How does PayYoyo work?
-                  </h3>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      When you&apos;re near a store, PayYoyo automatically detects your location and scans all your gift cards. It instantly finds the best combination to use for your purchase, then you just tap to confirm. It&apos;s like having a personal assistant who never forgets your gift cards.
-                    </div>
-                  </div>
-                </div>
 
-                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    What makes PayYoyo different?
-                  </h3>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Other payment apps require you to manually search and select gift cards. PayYoyo does everything automatically using AI and your phone&apos;s location. No more forgotten cards or manual searching - just seamless payments that save you money.
-                    </div>
-                  </div>
-                </div>
 
-                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    Is my information safe?
-                  </h3>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      Absolutely. PayYoyo uses the same security standards as major banks. Your gift card information is encrypted and protected at all times. We never store your actual card numbers, just secure tokens that keep your data completely safe.
-                    </div>
-                  </div>
-                </div>
-
-                <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                  <h3 itemProp="name" className="text-xl font-semibold text-gray-900 mb-3">
-                    When can I start using PayYoyo?
-                  </h3>
-                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                    <div itemProp="text" className="text-gray-600 leading-relaxed">
-                      We&apos;re currently testing with a small group of users and merchants. Join our waitlist to get early access as soon as we launch. We want to make sure everything works perfectly before making it available to everyone.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mt-16"
-        >
-          <Button size="lg" className="px-8 py-4 text-lg">
-            Experience Autonomous Payments
-          </Button>
-          <p className="mt-4 text-gray-600">Join our waiting list for early access</p>
-        </motion.div>
       </div>
     </section>
     </>

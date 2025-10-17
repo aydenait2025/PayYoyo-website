@@ -32,7 +32,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              The world&apos;s first truly autonomous gift card payment system, powered by AI-driven GPS intelligence and financial optimization.
+              Turn your wallet into your personal money manager. With AI and GPS intelligence, it spots the right gift cards, discovers discounts, and applies promo codes at the perfect moment — helping you spend smarter, save more, and enjoy life without financial guesswork.
             </motion.p>
           </div>
 
@@ -83,7 +83,8 @@ export function Footer() {
                 {[
                   { name: 'About', id: 'problem' },
                   { name: 'Careers', href: '/careers' },
-                  { name: 'Press', id: null },
+                  { name: 'FAQ', href: '/faq' },
+                  { name: 'Cookie Policy', href: '/cookie-policy' },
                   { name: 'Contact', id: 'contact' }
                 ].map((item) => (
                   <li key={item.name}>

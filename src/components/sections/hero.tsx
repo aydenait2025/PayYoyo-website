@@ -47,11 +47,13 @@ export function Hero() {
             transition={{ duration: 0.8 }}
             className="mb-4"
           >
-            <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Never Lose Gift Card Value
               <span className="block text-[#1E40AF]">Again</span>
             </h1>
           </motion.div>
+
+
 
           {/* Subheadline */}
           <motion.div
@@ -60,8 +62,8 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-4"
           >
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our smart gift card wallet automatically pops up when you&apos;re near a store, shows you what cards you have available, and saves you money by using the best one first.
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Your smart wallet pops up when you're near a store, shows all your gift cards, finds the best discounts, applies promo codes automatically, and ensures you always save the most — effortlessly.
             </p>
           </motion.div>
 
