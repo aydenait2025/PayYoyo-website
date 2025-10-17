@@ -84,6 +84,8 @@ export function Footer() {
                   { name: 'About', id: 'problem' },
                   { name: 'Careers', href: '/careers' },
                   { name: 'FAQ', href: '/faq' },
+                  { name: 'Terms of Use', href: '/terms-of-use' },
+                  { name: 'Terms of Service', href: '/terms-of-service' },
                   { name: 'Cookie Policy', href: '/cookie-policy' },
                   { name: 'Contact', id: 'contact' }
                 ].map((item) => (
