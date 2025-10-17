@@ -43,7 +43,7 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+              <h4 className="text-xs font-semibold text-gray-900 tracking-wider uppercase mb-4">
                 Product
               </h4>
               <ul className="space-y-2">
@@ -76,13 +76,14 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h4 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+              <h4 className="text-xs font-semibold text-gray-900 tracking-wider uppercase mb-4">
                 Company
               </h4>
               <ul className="space-y-2">
                 {[
                   { name: 'About', id: 'problem' },
                   { name: 'Careers', href: '/careers' },
+                  { name: 'FAQ', href: '/faq' },
                   { name: 'Contact', id: 'contact' }
                 ].map((item) => (
                   <li key={item.name}>
@@ -126,30 +127,24 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           {/* Legal Links */}
-          <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 mb-6">
-            <span className="text-xs text-gray-500 font-medium">Legal:</span>
-            <div className="flex flex-wrap gap-4">
-              <a href="/privacy" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms-of-service" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
-                Terms of Service
-              </a>
-              <a href="/terms-of-use" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
-                Terms of Use
-              </a>
-              <a href="/cookie-policy" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
-                Cookie Policy
-              </a>
-              <a href="/faq" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
-                FAQ
-              </a>
-            </div>
+          <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6">
+            <a href="/privacy" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
+              Privacy Policy
+            </a>
+            <a href="/terms-of-service" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
+              Terms of Service
+            </a>
+            <a href="/terms-of-use" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
+              Terms of Use
+            </a>
+            <a href="/cookie-policy" className="text-xs text-gray-500 hover:text-[#1E40AF] transition-colors">
+              Cookie Policy
+            </a>
           </div>
 
           {/* Main Bottom Content */}
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-500 text-sm text-center md:text-left space-y-1">
+            <div className="text-gray-500 text-xs text-center md:text-left space-y-1">
               <p>© 2025 AydenAIT Solutions. All rights reserved.</p>
               <p className="text-xs opacity-75">PayYoYo is a product of AydenAIT Solutions.</p>
             </div>
