@@ -63,7 +63,7 @@ export function Problem() {
               The Hidden Gift Card Problem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Most people have gift cards they've completely forgotten about. The average person wastes $53 every month on unused gift cards - that's money just sitting there, unused.
+              Most people have gift cards they&apos;ve completely forgotten about. The average person wastes $53 every month on unused gift cards - that&apos;s money just sitting there, unused.
             </p>
           </motion.div>
         </div>
@@ -98,9 +98,9 @@ export function Problem() {
           className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-8 md:p-12"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Google Pay & Apple Wallet Aren't Enough</h3>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Google Pay & Apple Wallet Aren&apos;t Enough</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Current digital wallets are just static containers - they store your cards but don't actively help you use them optimally.
+              Current digital wallets are just static containers - they store your cards but don&apos;t actively help you use them optimally.
             </p>
           </div>
 
