@@ -120,7 +120,7 @@ export default function CookiePolicy() {
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Updates to This Policy</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last updated" date at the top of this policy.
+                We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the &quot;Last updated&quot; date at the top of this policy.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 We encourage you to review this Cookie Policy periodically to stay informed about our use of cookies and related technologies.
@@ -147,7 +147,7 @@ export default function CookiePolicy() {
             <div className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">Questions About Our Privacy Practices?</h2>
               <p className="text-xl opacity-90 mb-6">
-                We're committed to transparency and protecting your privacy. Contact our privacy team for any concerns.
+                We&apos;re committed to transparency and protecting your privacy. Contact our privacy team for any concerns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

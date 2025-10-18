@@ -103,7 +103,7 @@ export default function TermsOfUse() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Service Availability</h2>
               <div className="space-y-4 text-gray-600">
                 <p><strong>8.1 Service Levels:</strong> While we strive for high availability, PayYoyo services may occasionally be unavailable due to maintenance, technical issues, or factors beyond our control.</p>
-                <p><strong>8.2 Beta Features:</strong> Some features may be in beta testing. These features are provided "as is" and may contain bugs or undergo changes.</p>
+                <p><strong>8.2 Beta Features:</strong> Some features may be in beta testing. These features are provided &quot;as is&quot; and may contain bugs or undergo changes.</p>
                 <p><strong>8.3 Third-Party Services:</strong> PayYoyo integrates with third-party services. We are not responsible for the availability or performance of these external services.</p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function TermsOfUse() {
             <div className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">Questions About Usage Guidelines?</h2>
               <p className="text-xl opacity-90 mb-6">
-                We're here to help clarify any questions about how to properly use PayYoyo.
+                We&apos;re here to help clarify any questions about how to properly use PayYoyo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

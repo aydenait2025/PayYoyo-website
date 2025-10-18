@@ -102,7 +102,7 @@ export function SavingsCalculator({ className = '' }: SavingsCalculatorProps) {
                 Saved Annually
               </p>
               <p className="text-sm text-gray-600">
-                That's ${(annualSavings/12).toFixed(0)} saved each month! 🎉
+                That&apos;s ${(annualSavings/12).toFixed(0)} saved each month! 🎉
               </p>
             </motion.div>
           </>

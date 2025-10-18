@@ -64,7 +64,7 @@ export function Hero() {
             className="mb-4"
           >
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Your smart wallet pops up when you're near a store, shows all your gift cards, finds the best discounts, applies promo codes automatically, and ensures you always save the most — effortlessly.
+              Your smart wallet pops up when you&apos;re near a store, shows all your gift cards, finds the best discounts, applies promo codes automatically, and ensures you always save the most — effortlessly.
             </p>
           </motion.div>
 
@@ -135,7 +135,7 @@ export function Hero() {
                     <span className="text-xs text-gray-600 ml-1">Verified Early Access User</span>
                   </div>
                   <p className="text-sm text-gray-700 italic leading-relaxed">
-                    &ldquo;PayYoYo saved me $487 in my first month. It's like having a personal shopper in my pocket.&rdquo;
+                    &ldquo;PayYoYo saved me $487 in my first month. It&apos;s like having a personal shopper in my pocket.&rdquo;
                   </p>
                   <p className="text-xs text-gray-500 mt-1">- Jessica K., Vancouver</p>
                 </div>

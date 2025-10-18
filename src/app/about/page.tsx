@@ -292,7 +292,7 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Culture & Values</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              We're not just building a product — we're creating a movement to democratize financial intelligence
+              We&apos;re not just building a product — we&apos;re creating a movement to democratize financial intelligence
             </p>
           </motion.div>
 

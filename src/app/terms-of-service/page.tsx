@@ -36,7 +36,7 @@ export default function TermsOfService() {
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                By accessing and using PayYoyo ("the Service"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                By accessing and using PayYoyo (&quot;the Service&quot;), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export default function TermsOfService() {
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Disclaimer of Warranties</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                The information on this website and the PayYoyo service is provided on an 'as is' basis. To the fullest extent permitted by law, PayYoyo excludes all representations, warranties, conditions and terms whether express or implied, statutory or otherwise.
+                The information on this website and the PayYoyo service is provided on an &apos;as is&apos; basis. To the fullest extent permitted by law, PayYoyo excludes all representations, warranties, conditions and terms whether express or implied, statutory or otherwise.
               </p>
             </div>
 
@@ -141,7 +141,7 @@ export default function TermsOfService() {
             <div className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">Questions About Our Terms?</h2>
               <p className="text-xl opacity-90 mb-6">
-                We're here to help clarify any questions about our terms of service.
+                We&apos;re here to help clarify any questions about our terms of service.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

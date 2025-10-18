@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                At PayYoyo ("we," "our," or "us"), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered gift card management platform.
+                At PayYoyo (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered gift card management platform.
               </p>
             </div>
 
@@ -183,7 +183,7 @@ export default function PrivacyPolicy() {
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children's Privacy</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Children&apos;s Privacy</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 PayYoyo is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.
               </p>
@@ -199,7 +199,7 @@ export default function PrivacyPolicy() {
             <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Changes to This Policy</h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. We will notify you of any material changes by posting the updated policy on our website and updating the "Last updated" date.
+                We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. We will notify you of any material changes by posting the updated policy on our website and updating the &quot;Last updated&quot; date.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
@@ -227,7 +227,7 @@ export default function PrivacyPolicy() {
             <div className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">Questions About Your Privacy?</h2>
               <p className="text-xl opacity-90 mb-6">
-                We're committed to transparency and protecting your personal information. Contact our privacy team for any concerns.
+                We&apos;re committed to transparency and protecting your personal information. Contact our privacy team for any concerns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

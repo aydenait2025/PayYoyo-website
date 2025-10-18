@@ -36,9 +36,9 @@ export function SignupForm({ onClose }: SignupFormProps) {
         </div>
 
         {/* Personalized Success Message */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">You're in, {name.split(' ')[0]}!</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">You&apos;re in, {name.split(' ')[0]}!</h3>
         <p className="text-gray-600 mb-6">
-          Welcome to the PayYoYo $636 Annual Savings Club! We'll notify you instantly when early access launches.
+          Welcome to the PayYoYo $636 Annual Savings Club! We&apos;ll notify you instantly when early access launches.
         </p>
 
         {/* Quick Win Alert */}
@@ -50,7 +50,7 @@ export function SignupForm({ onClose }: SignupFormProps) {
             <span className="font-semibold">Pro Tip:</span>
           </div>
           <p className="text-blue-700 text-sm mt-1">
-            You're now part of the first 1,000 users - get exclusive beta pricing!
+            You&apos;re now part of the first 1,000 users - get exclusive beta pricing!
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export function SignupForm({ onClose }: SignupFormProps) {
               <span className="text-xs text-gray-500 ml-1">Verified Sign-up</span>
             </div>
             <p className="text-sm text-gray-700 italic">
-              &ldquo;I calculated I'd save $480 in the first month. PayYoYo paid for itself instantly!&rdquo;
+              &ldquo;I calculated I&apos;d save $480 in the first month. PayYoYo paid for itself instantly!&rdquo;
             </p>
             <p className="text-xs text-gray-500 mt-1">- Sarah M., Toronto</p>
           </div>
