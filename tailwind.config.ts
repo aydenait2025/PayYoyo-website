@@ -58,7 +58,8 @@ const config: Config = {
   },
   plugins: [
     // Performance-focused plugins only
-    function({ addUtilities }) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    function({ addUtilities }: any) {
       addUtilities({
         '.scroll-smooth': {
           'scroll-behavior': 'smooth',
@@ -70,4 +71,3 @@ const config: Config = {
     },
   ],
 };
-
