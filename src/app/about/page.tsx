@@ -232,53 +232,7 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          {/* Advisors Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Strategic Advisors</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: 'Jennifer Williams',
-                  title: 'Former CEO, PayPal Canada',
-                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Jennifer',
-                  expertise: 'Strategy, Operations, Regulatory Compliance'
-                },
-                {
-                  name: 'Dr. Robert Chen',
-                  title: 'AI Ethics & Fintech Advisor',
-                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Robert',
-                  expertise: 'Ethics, AI Policy, Regulatory Strategy'
-                },
-                {
-                  name: 'Amanda Foster',
-                  title: 'Growth Marketing Expert',
-                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Amanda',
-                  expertise: 'Growth Strategy, User Acquisition, KPI Optimization'
-                },
-              ].map((advisor, index) => (
-                <motion.div
-                  key={advisor.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6 text-center"
-                >
-                  <img
-                    src={advisor.image}
-                    alt={advisor.name}
-                    className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
-                  />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{advisor.name}</h3>
-                  <p className="text-blue-600 font-medium text-sm mb-2">{advisor.title}</p>
-                  <p className="text-gray-600 text-xs">{advisor.expertise}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+
         </div>
       </section>
 
