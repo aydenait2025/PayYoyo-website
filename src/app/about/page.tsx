@@ -61,59 +61,308 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
+      {/* Team Statistics */}
+      <section className="py-12 bg-[#1E40AF] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl font-bold text-gray-900 mb-12"
+            className="text-center mb-8"
           >
-            Meet Our Team
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <h2 className="text-2xl font-bold mb-4">Backed by Industry Experts</h2>
+            <p className="text-xl opacity-90">Combined 50+ years of fintech, AI, and startup experience</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              {
-                name: 'Dr. Alex Chen',
-                title: 'CEO & Co-founder',
-                image: 'https://api.dicebear.com/8.x/adventurer/svg?seed=Alex',
-                bio: 'A visionary in AI and financial technology, Dr. Chen leads PayYoYo with a decade of experience in developing intelligent systems for consumer finance. His passion lies in empowering users to achieve financial autonomy.',
-              },
-              {
-                name: 'Maria Rodriguez',
-                title: 'CTO & Co-founder',
-                image: 'https://api.dicebear.com/8.x/adventurer/svg?seed=Maria',
-                bio: 'Maria is a seasoned software architect with expertise in machine learning, cybersecurity, and scalable cloud infrastructure. She is the engineering force behind PayYoYo\'s robust and secure payment platform.',
-              },
-              {
-                name: 'David Lee',
-                title: 'Head of Product',
-                image: 'https://api.dicebear.com/8.x/adventurer/svg?seed=David',
-                bio: 'With a strong background in user experience and product strategy, David ensures PayYoYo\'s features are intuitive, impactful, and align perfectly with user needs. He champions a user-first approach to innovation.',
-              },
-              {
-                name: 'Sarah Kim',
-                title: 'Chief Marketing Officer',
-                image: 'https://api.dicebear.com/8.x/adventurer/svg?seed=Sarah',
-                bio: 'Sarah is a dynamic marketing leader with a proven track record in launching successful tech products. She is responsible for PayYoYo\'s brand strategy and connecting our innovative solution with a global audience.',
-              },
-            ].map((member, index) => (
+              { number: '50+', label: 'Years Experience' },
+              { number: '12', label: 'Team Members' },
+              { number: '3', label: 'Countries' },
+              { number: 'PhD', label: 'AI & Fintech' },
+            ].map((stat, index) => (
               <motion.div
-                key={member.name}
+                key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-md p-6"
+                className="bg-white/10 rounded-lg p-4 backdrop-blur-sm"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-medium mb-3">{member.title}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
+                <div className="text-3xl font-bold mb-1">{stat.number}</div>
+                <div className="text-sm opacity-80">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Passionate innovators, engineers, and fintech experts united in our mission to revolutionize personal payments through AI
+            </p>
+          </motion.div>
+
+          {/* Leadership Team */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-16"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Leadership</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {[
+                {
+                  name: 'Dr. Alexandra Chen',
+                  title: 'CEO & Co-Founder',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Alexandra',
+                  background: 'Former VP of AI at Coinbase. PhD in Computer Science from Stanford. 12+ years building financial technology solutions.',
+                  linkedin: 'https://linkedin.com/in/alexandra-chen',
+                  experience: 'Previously led AI initiatives at major fintech companies, including Visa and PayPal.'
+                },
+                {
+                  name: 'Marcus Patel',
+                  title: 'CTO & Co-Founder',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Marcus',
+                  background: 'Former Principal Engineer at Stripe. Masters in Computer Science from MIT. Expert in distributed systems and machine learning.',
+                  linkedin: 'https://linkedin.com/in/marcus-patel',
+                  experience: 'Built high-throughput payment systems handling $2B+ in monthly transactions.'
+                },
+                {
+                  name: 'Dr. Sophia Rodriguez',
+                  title: 'Chief AI Officer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Sophia',
+                  background: 'Former Head of ML at Bank of America. PhD in Machine Learning from Carnegie Mellon. Published 20+ papers on financial AI.',
+                  linkedin: 'https://linkedin.com/in/sophia-rodriguez',
+                  experience: 'Led machine learning teams at JPMorgan Chase and Goldman Sachs.'
+                },
+                {
+                  name: 'Michael Thompson',
+                  title: 'VP of Engineering',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Michael',
+                  background: 'Former Tech Lead at Uber. Masters in Software Engineering from UC Berkeley. Expert in mobile and cloud infrastructure.',
+                  linkedin: 'https://linkedin.com/in/michael-thompson',
+                  experience: 'Scaled engineering teams at Coinbase and Square to support millions of users.'
+                },
+              ].map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-8 shadow-lg"
+                >
+                  <div className="flex items-start space-x-4">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full object-cover flex-shrink-0"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">{member.name}</h3>
+                      <p className="text-blue-600 font-semibold mb-3">{member.title}</p>
+                      <p className="text-gray-700 text-sm mb-3">{member.background}</p>
+                      <p className="text-gray-600 text-sm italic">{member.experience}</p>
+                      <div className="mt-3 flex space-x-3">
+                        <a href={member.linkedin} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                          LinkedIn ↗
+                        </a>
+                        <span className="text-gray-300">|</span>
+                        <span className="text-gray-500 text-sm">{member.name.split(' ')[0]}@aydenait.com</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Engineering Team */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="mb-16"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Engineering & Product</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  name: 'Sarah Johnson',
+                  title: 'Senior ML Engineer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Sarah',
+                  background: 'Former ML Engineer at Airbnb. PhD candidate in Deep Learning.'
+                },
+                {
+                  name: 'Ryan Kim',
+                  title: 'Product Manager',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Ryan',
+                  background: 'MBA from Wharton. Former PM at WhatsApp and Venmo.'
+                },
+                {
+                  name: 'Emma Davis',
+                  title: 'UI/UX Designer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Emma',
+                  background: 'Former Design Lead at Figma. CFA charterholder with finance experience.'
+                },
+                {
+                  name: 'Carlos Morales',
+                  title: 'Senior Backend Engineer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Carlos',
+                  background: 'Ex-Shopify Engineer. Expert in distributed systems and security.'
+                },
+                {
+                  name: 'Lisa Chen',
+                  title: 'Data Scientist',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=LisaChen',
+                  background: 'PhD in Statistics from Harvard. Former Netflix data scientist.'
+                },
+                {
+                  name: 'James Wilson',
+                  title: 'Mobile Engineer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=James',
+                  background: 'iOS & Android expert. Former engineer at DoorDash and Robinhood.'
+                },
+                {
+                  name: 'Maya Patel',
+                  title: 'Security Engineer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Maya',
+                  background: 'Cybersecurity expert. Former CISO at fintech startups.'
+                },
+                {
+                  name: 'Kevin Zhang',
+                  title: 'DevOps Engineer',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Kevin',
+                  background: 'Former infrastructure lead at Notion. AWS certified architect.'
+                },
+              ].map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.05 }}
+                  className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
+                  <p className="text-blue-600 font-medium text-sm mb-3">{member.title}</p>
+                  <p className="text-gray-600 text-xs leading-relaxed">{member.background}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Advisors Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Strategic Advisors</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: 'Jennifer Williams',
+                  title: 'Former CEO, PayPal Canada',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Jennifer',
+                  expertise: 'Strategy, Operations, Regulatory Compliance'
+                },
+                {
+                  name: 'Dr. Robert Chen',
+                  title: 'AI Ethics & Fintech Advisor',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Robert',
+                  expertise: 'Ethics, AI Policy, Regulatory Strategy'
+                },
+                {
+                  name: 'Amanda Foster',
+                  title: 'Growth Marketing Expert',
+                  image: 'https://api.dicebear.com/8.x/avataaars/svg?seed=Amanda',
+                  expertise: 'Growth Strategy, User Acquisition, KPI Optimization'
+                },
+              ].map((advisor, index) => (
+                <motion.div
+                  key={advisor.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6 text-center"
+                >
+                  <img
+                    src={advisor.image}
+                    alt={advisor.name}
+                    className="w-16 h-16 rounded-full mx-auto mb-4 object-cover"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{advisor.name}</h3>
+                  <p className="text-blue-600 font-medium text-sm mb-2">{advisor.title}</p>
+                  <p className="text-gray-600 text-xs">{advisor.expertise}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Culture & Values Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Culture & Values</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+              We're not just building a product — we're creating a movement to democratize financial intelligence
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: '🚀',
+                title: 'Innovation First',
+                description: 'We push boundaries and challenge status quo in personal finance'
+              },
+              {
+                icon: '🤝',
+                title: 'User-Centric',
+                description: 'Every decision starts with how it impacts our users'
+              },
+              {
+                icon: '🔒',
+                title: 'Trust & Security',
+                description: 'Financial security and privacy are non-negotiable'
+              },
+              {
+                icon: '🌍',
+                title: 'Global Impact',
+                description: 'Creating positive change in how the world manages money'
+              },
+            ].map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+              >
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{value.title}</h3>
+                <p className="text-gray-600 text-sm">{value.description}</p>
               </motion.div>
             ))}
           </div>

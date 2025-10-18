@@ -6,6 +6,7 @@ import { Problem } from '@/components/sections/problem';
 import { Solution } from '@/components/sections/solution';
 import { Market } from '@/components/sections/market';
 import { Contact } from '@/components/sections/contact';
+import { TeamPreview } from '@/components/sections/team-preview';
 
 export const metadata: Metadata = {
   title: 'PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually',
@@ -29,6 +30,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Market />
+        <TeamPreview />
         <Contact />
       </main>
       <Footer />
