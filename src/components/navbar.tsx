@@ -58,7 +58,6 @@ export function Navbar() {
                 { name: 'Solution', href: '#solution' },
                 { name: 'Market', href: '#market' },
                 { name: 'Features', href: '/features' },
-                { name: 'Pricing', href: '/pricing' },
                 { name: 'Contact', href: '#contact' },
               ].map((item) => (
                 <Link
@@ -139,7 +138,6 @@ export function Navbar() {
                 { name: 'Solution', href: '#solution' },
                 { name: 'Market', href: '#market' },
                 { name: 'Features', href: '/features' },
-                { name: 'Pricing', href: '/pricing' },
                 { name: 'Contact', href: '#contact' },
               ].map((item, index) => (
                 <motion.div
