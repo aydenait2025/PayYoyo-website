@@ -291,13 +291,22 @@ export function Solution() {
                   <h4 className="text-lg font-semibold text-gray-900 mb-2">Automatic Payment</h4>
                   <p className="text-gray-600">User scans barcode at POS → balance updated automatically ($25.50 → $22.08).</p>
                   <div className="bg-blue-50 p-4 rounded-lg mt-2">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-sm">✓</span>
+                    <div className="flex items-center justify-start space-x-4">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <div className="text-sm">
+                          <p className="font-medium text-gray-900">Transaction recorded: $3.42 coffee purchase</p>
+                          <p className="text-gray-500 text-xs">Starbucks Balance: $22.08 (${"$"}3.42 used)</p>
+                        </div>
                       </div>
-                      <div className="text-sm">
-                        <p className="font-medium text-gray-900">Transaction recorded: $3.42 coffee purchase</p>
-                        <p className="text-gray-500 text-xs">Starbucks Balance: $22.08 (${"$"}3.42 used)</p>
+                      <div className="bg-white p-2 rounded-lg border">
+                        <img
+                          src="/tim-hortons-qr.webp"
+                          alt="Tim Hortons QR Code Example"
+                          className="w-7 h-9 object-contain"
+                        />
                       </div>
                     </div>
                   </div>

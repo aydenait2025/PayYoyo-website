@@ -63,7 +63,7 @@ export function Problem() {
               The Hidden Gift Card Problem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Most people have gift cards they&apos;ve completely forgotten about. The average person wastes $53 every month on unused gift cards - that&apos;s money just sitting there, unused.
+              Most people have gift cards they've completely forgotten about. The average person wastes $53 every month on unused gift cards - that's money just sitting there, unused.
             </p>
           </motion.div>
         </div>

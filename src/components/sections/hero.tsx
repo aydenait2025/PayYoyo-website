@@ -38,7 +38,7 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left column - Text content */}
           <div className="text-center lg:text-left">
           {/* Main Headline */}
@@ -135,7 +135,7 @@ export function Hero() {
                     <span className="text-xs text-gray-600 ml-1">Verified Early Access User</span>
                   </div>
                   <p className="text-sm text-gray-700 italic leading-relaxed">
-                    "PayYoYo saved me $487 in my first month. It's like having a personal shopper in my pocket."
+                    &ldquo;PayYoYo saved me $487 in my first month. It's like having a personal shopper in my pocket.&rdquo;
                   </p>
                   <p className="text-xs text-gray-500 mt-1">- Jessica K., Vancouver</p>
                 </div>
@@ -281,18 +281,16 @@ export function Hero() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:block"
+            className="hidden lg:block pt-8"
           >
             <div className="relative">
               {/* Main mockup image placeholder */}
-              <div className="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-3xl p-8 shadow-2xl border border-white/50 backdrop-blur-sm">
-                <div className="bg-white rounded-2xl p-6 shadow-lg">
+              <div className="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-3xl p-4 shadow-2xl border border-white/50 backdrop-blur-sm max-w-sm mx-auto">
+                <div className="bg-white rounded-2xl p-4 shadow-lg">
                   {/* Phone mockup */}
                   <div className="bg-gray-900 rounded-2xl p-4 text-white">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center space-x-2">
-                        <div className="w-3 h-3 bg-white rounded-full"></div>
-                        <span className="text-sm font-medium">PayYoYo</span>
                       </div>
                       <span className="text-xs opacity-70">9:41</span>
                     </div>
@@ -307,42 +305,59 @@ export function Hero() {
                       </div>
                     </div>
 
-                    {/* Gift card suggestions */}
+                    {/* Payment options */}
                     <div className="space-y-3">
-                      <div className="bg-green-600 rounded-lg p-3">
+                      <div className="bg-green-900 rounded-lg p-3">
                         <div className="flex items-center justify-between">
                           <div>
-                            <p className="font-medium text-xs">Use Starbucks Cards</p>
-                            <p className="text-green-100 text-xs">$25.50 balance • Expires Mar 2026</p>
+                            <p className="font-medium text-xs text-green-100">Starbucks</p>
+                            <p className="text-yellow-100 text-xs">$25.50 balance </p>
                           </div>
-                          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                            <span className="text-green-600 text-sm font-bold">$25</span>
+                          <div className="flex items-center justify-center">
+                            <img
+                              src="/Starbucks.svg.png"
+                              alt="Starbucks"
+                              className="h-5 object-contain"
+                            />
                           </div>
                         </div>
                       </div>
 
-                      <div className="bg-gray-700 rounded-lg p-3 opacity-60">
+                      <div className="bg-yellow-500 rounded-lg p-3">
                         <div className="flex items-center justify-between">
                           <div>
-                            <p className="font-medium text-xs">Credit Card (Visa)</p>
-                            <p className="text-gray-300 text-xs">****4532 • Exp 08/26</p>
+                            <p className="font-medium text-xs text-gray-900">Visa</p>
+                            <p className="text-gray-800 text-xs">****4532 • Exp 08/26</p>
                           </div>
-                          <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
-                            <span className="text-gray-300 text-xs">Visa</span>
+                          <div className="flex items-center justify-center">
+                            <img
+                              src="/Visa.svg.png"
+                              alt="Visa"
+                              className="h-5 object-contain"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-gray-500 rounded-lg p-3">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="font-medium text-xs text-white">Mastercard</p>
+                            <p className="text-gray-300 text-xs">****9876 • Exp 12/28</p>
+                          </div>
+                          <div className="flex items-center justify-center">
+                            <img
+                              src="/Mastercard.svg.png"
+                              alt="Mastercard"
+                              className="h-5 object-contain"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Payment button */}
-                    <div className="mt-6">
-                      <button className="w-full bg-[#1E40AF] text-white py-3 rounded-lg font-medium">
-                        Pay $11.75
-                      </button>
-                      <p className="text-center text-xs text-gray-400 mt-2">
-                        Saves you $2.85 vs credit card alone
-                      </p>
-                    </div>
+                    {/* Ready to pay indicator */}
+                   
                   </div>
                 </div>
               </div>
@@ -357,19 +372,134 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="text-xs font-medium text-gray-900">Card Found!</p>
-                    <p className="text-xs text-gray-500">25% discount applied</p>
                   </div>
                 </div>
               </div>
 
+            </div>
+
+            {/* PayYoYo Cashier Scanning Interface */}
+            <div className="relative mt-8">
+              <div className="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-3xl p-4 shadow-2xl border border-white/50 backdrop-blur-sm max-w-sm mx-auto">
+                <div className="bg-white rounded-2xl p-4 shadow-lg">
+                  {/* Phone mockup - Matches first mockup style */}
+                  <div className="bg-gray-900 rounded-2xl p-4 text-white">
+                    <div className="flex items-center justify-between mb-4">
+
+                      <span className="text-xs opacity-70">9:41</span>
+                    </div>
+
+
+
+                    {/* Payment QR - what cashier scans */}
+                    <div className="space-y-3">
+                      <div className="bg-white p-3 rounded-lg">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="text-green-600 bg-green-100 px-2 py-1 rounded text-xs">Active</div>
+                        </div>
+
+                        {/* Simplified QR Code - what cashier actually scans */}
+                        <div className="flex justify-center py-2 bg-gray-50 rounded">
+                          <svg width="80" height="80" viewBox="0 0 21 21" className="bg-white border border-gray-300">
+                            {/* Finder patterns - black squares in corners */}
+                            <rect x="0" y="0" width="5" height="5" fill="black"/>
+                            <rect x="1" y="1" width="3" height="3" fill="white"/>
+                            <rect x="2" y="2" width="1" height="1" fill="black"/>
+
+                            <rect x="16" y="0" width="5" height="5" fill="black"/>
+                            <rect x="17" y="1" width="3" height="3" fill="white"/>
+                            <rect x="18" y="2" width="1" height="1" fill="black"/>
+
+                            <rect x="0" y="16" width="5" height="5" fill="black"/>
+                            <rect x="1" y="17" width="3" height="3" fill="white"/>
+                            <rect x="2" y="18" width="1" height="1" fill="black"/>
+
+                            {/* Random data pattern */}
+                            <rect x="6" y="2" width="1" height="1" fill="black"/>
+                            <rect x="8" y="2" width="1" height="1" fill="black"/>
+                            <rect x="10" y="2" width="1" height="1" fill="black"/>
+                            <rect x="14" y="2" width="1" height="1" fill="black"/>
+                            <rect x="18" y="2" width="1" height="1" fill="black"/>
+
+                            <rect x="2" y="6" width="1" height="1" fill="black"/>
+                            <rect x="4" y="6" width="1" height="1" fill="black"/>
+                            <rect x="10" y="6" width="1" height="1" fill="black"/>
+                            <rect x="12" y="6" width="1" height="1" fill="black"/>
+                            <rect x="16" y="6" width="1" height="1" fill="black"/>
+                            <rect x="18" y="6" width="1" height="1" fill="black"/>
+
+                            <rect x="6" y="8" width="1" height="1" fill="black"/>
+                            <rect x="8" y="8" width="1" height="1" fill="black"/>
+                            <rect x="12" y="8" width="1" height="1" fill="black"/>
+                            <rect x="14" y="8" width="1" height="1" fill="black"/>
+
+                            <rect x="4" y="10" width="1" height="1" fill="black"/>
+                            <rect x="6" y="10" width="1" height="1" fill="black"/>
+                            <rect x="12" y="10" width="1" height="1" fill="black"/>
+                            <rect x="14" y="10" width="1" height="1" fill="black"/>
+                            <rect x="16" y="10" width="1" height="1" fill="black"/>
+
+                            <rect x="6" y="12" width="1" height="1" fill="black"/>
+                            <rect x="8" y="12" width="1" height="1" fill="black"/>
+                            <rect x="10" y="12" width="1" height="1" fill="black"/>
+                            <rect x="14" y="12" width="1" height="1" fill="black"/>
+                            <rect x="16" y="12" width="1" height="1" fill="black"/>
+
+                            <rect x="2" y="14" width="1" height="1" fill="black"/>
+                            <rect x="4" y="14" width="1" height="1" fill="black"/>
+                            <rect x="8" y="14" width="1" height="1" fill="black"/>
+                            <rect x="10" y="14" width="1" height="1" fill="black"/>
+                            <rect x="14" y="14" width="1" height="1" fill="black"/>
+                            <rect x="16" y="14" width="1" height="1" fill="black"/>
+
+                            <rect x="6" y="16" width="1" height="1" fill="black"/>
+                            <rect x="8" y="16" width="1" height="1" fill="black"/>
+                            <rect x="10" y="16" width="1" height="1" fill="black"/>
+                            <rect x="12" y="16" width="1" height="1" fill="black"/>
+                            <rect x="14" y="16" width="1" height="1" fill="black"/>
+                          </svg>
+                        </div>
+
+                        <div className="text-center mt-2">
+                          <p className="text-xs text-gray-600">$29.95</p>
+                          <p className="text-xs text-gray-500">Ready to scan</p>
+                        </div>
+                      </div>
+
+                      <div className="bg-gray-700 rounded-lg p-3 opacity-60">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="font-medium text-xs">Rewards QR</p>
+                            <p className="text-gray-300 text-xs">Member loyalty scan</p>
+                          </div>
+                          <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
+                            <span className="text-gray-300 text-xs">QR</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Scan status */}
+                    <div className="mt-6 text-center">
+                      <p className="text-xs text-gray-400 mb-3">
+                        Present payment code to cashier for instant checkout
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating elements - matches first mockup */}
               <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg border border-gray-100">
                 <div className="flex items-center space-x-2">
-                  <svg className="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"></path>
+                    </svg>
+                  </div>
                   <div>
-                    <p className="text-xs font-medium text-gray-900">GPS Active</p>
-                    <p className="text-xs text-gray-500">Location detected</p>
+                    <p className="text-xs font-medium text-gray-900">Scan QR Code</p>
+                    <p className="text-xs text-gray-500">Instant checkout</p>
                   </div>
                 </div>
               </div>
@@ -377,8 +507,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-
-
 
       {/* Modals */}
       <Modal isOpen={showSignupModal} onClose={closeModals}>

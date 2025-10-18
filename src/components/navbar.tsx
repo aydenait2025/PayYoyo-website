@@ -54,7 +54,7 @@ export function Navbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {[
-                { name: 'About', href: '#solution' },
+                { name: 'About', href: '/about' },
                 { name: 'Solution', href: '#solution' },
                 { name: 'Market', href: '#market' },
                 { name: 'Features', href: '/features' },
@@ -63,7 +63,7 @@ export function Navbar() {
               ].map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href.startsWith('#') ? item.href : item.href}
+                  href={item.href.startsWith('#') ? `/${item.href}` : item.href}
                   className="relative text-gray-700 hover:text-[#1E40AF] px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ease-out overflow-hidden group"
                 >
                   <motion.span
@@ -135,7 +135,7 @@ export function Navbar() {
           >
             <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
               {[
-                { name: 'About', href: '#solution' },
+                { name: 'About', href: '/about' },
                 { name: 'Solution', href: '#solution' },
                 { name: 'Market', href: '#market' },
                 { name: 'Features', href: '/features' },
@@ -149,7 +149,7 @@ export function Navbar() {
                   transition={{ delay: index * 0.05, duration: 0.3 }}
                 >
                   <Link
-                    href={item.href.startsWith('#') ? item.href : item.href}
+                    href={item.href.startsWith('#') ? `/${item.href}` : item.href}
                     className="block py-3 text-gray-700 hover:text-[#1E40AF] hover:bg-blue-50 rounded-lg px-3 transition-all duration-200 text-base font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

@@ -66,7 +66,7 @@ export function CookieConsent() {
                   </h3>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our{' '}
+                  We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking &ldquo;Accept All&rdquo;, you consent to our use of cookies. You can manage your preferences or learn more in our{' '}
                   <a
                     href="/cookie-policy"
                     target="_blank"

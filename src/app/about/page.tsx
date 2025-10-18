@@ -52,45 +52,11 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img
-                src="https://via.placeholder.com/600x400" // Placeholder image
+                src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Our Story"
                 className="rounded-lg shadow-xl"
               />
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Statistics */}
-      <section className="py-12 bg-[#1E40AF] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-2xl font-bold mb-4">Backed by Industry Experts</h2>
-            <p className="text-xl opacity-90">Combined 50+ years of fintech, AI, and startup experience</p>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { number: '50+', label: 'Years Experience' },
-              { number: '12', label: 'Team Members' },
-              { number: '3', label: 'Countries' },
-              { number: 'PhD', label: 'AI & Fintech' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white/10 rounded-lg p-4 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold mb-1">{stat.number}</div>
-                <div className="text-sm opacity-80">{stat.label}</div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

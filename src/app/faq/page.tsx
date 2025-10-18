@@ -176,7 +176,7 @@ export default function FAQ() {
                 Frequently Asked Questions
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Everything you need to know about PayYoyo's AI-powered gift card management system. Get answers to common questions and learn how to make the most of your smart wallet.
+                Everything you need to know about PayYoYo's AI-powered gift card management system. Get answers to common questions and learn how to make the most of your smart wallet.
               </p>
             </motion.div>
           </div>

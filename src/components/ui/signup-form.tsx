@@ -115,7 +115,7 @@ export function SignupForm({ onClose }: SignupFormProps) {
               <span className="text-xs text-gray-500 ml-1">Verified Sign-up</span>
             </div>
             <p className="text-sm text-gray-700 italic">
-              "I calculated I'd save $480 in the first month. PayYoYo paid for itself instantly!"
+              &ldquo;I calculated I'd save $480 in the first month. PayYoYo paid for itself instantly!&rdquo;
             </p>
             <p className="text-xs text-gray-500 mt-1">- Sarah M., Toronto</p>
           </div>

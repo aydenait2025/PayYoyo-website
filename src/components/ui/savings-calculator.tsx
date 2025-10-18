@@ -12,7 +12,6 @@ export function SavingsCalculator({ className = '' }: SavingsCalculatorProps) {
   const [monthlySpend, setMonthlySpend] = useState(400);
   const [annualSavings, setAnnualSavings] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [showBreakdown, setShowBreakdown] = useState(false);
 
   useEffect(() => {
     setLoading(true);

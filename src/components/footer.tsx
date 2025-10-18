@@ -74,7 +74,7 @@ export function Footer() {
               </h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'About', id: 'problem' },
+                  { name: 'About', href: '/about' },
                   { name: 'Careers', href: '/careers' },
                   { name: 'FAQ', href: '/faq' },
                   { name: 'Contact', id: 'contact' }
