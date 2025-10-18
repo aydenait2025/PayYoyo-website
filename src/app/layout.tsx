@@ -1,132 +1,190 @@
-'use client';
-
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { CookieConsent } from '@/components/ui/cookie-consent'
+import { LazyMotion, domAnimation } from 'framer-motion'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
+
+// Enhanced SEO Metadata
+export const metadata: Metadata = {
+  title: {
+    default: 'PayYoYo - AI Gift Card Wallet | Save $636 Annually',
+    template: '%s | PayYoYo'
+  },
+  description: 'Transform unused gift cards into $636 annual savings. AI-powered location-aware payments with GPS triggers and intelligent recommendations. Join 2,547+ users saving money automatically.',
+  keywords: [
+    'gift card optimizer',
+    'AI payments',
+    'location-based wallet',
+    'mobile payments',
+    'save money shopping',
+    'gift card wallet',
+    'smart payments',
+    'GPS enhanced payments',
+    'autonomous wallet'
+  ],
+  authors: [{ name: 'AydenAIT Solutions', url: 'https://payyoyo.com' }],
+  creator: 'AydenAIT Solutions',
+  publisher: 'AydenAIT Solutions',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://payyoyo.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/',
+      'en-CA': '/',
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://payyoyo.com',
+    title: 'PayYoYo - AI Gift Card Wallet | Save $636 Annually',
+    description: 'Transform unused gift cards into $636 annual savings. AI-powered location-aware payments with GPS triggers.',
+    siteName: 'PayYoYo',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'PayYoYo - AI-Powered Gift Card Wallet',
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'PayYoYo - AI Gift Card Wallet | Save $636 Annually',
+    description: 'Transform unused gift cards into $636 annual savings with AI-powered smart payments.',
+    images: ['/twitter-card.jpg'],
+    creator: '@PayYoYo',
+    site: '@PayYoYo',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+    other: {
+      rel: 'apple-touch-icon-precomposed',
+      url: '/apple-touch-icon.png',
+    },
+  },
+  manifest: '/manifest.json',
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1E40AF' },
+    { media: '(prefers-color-scheme: dark)', color: '#1E40AF' },
+  ],
+  colorScheme: 'light dark',
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'PayYoYo',
+    url: 'https://payyoyo.com',
+    logo: 'https://payyoyo.com/logo.png',
+    description: 'AI-powered autonomous payment platform that eliminates payment friction through GPS intelligence and machine learning optimization.',
+    foundingDate: '2024',
+    sameAs: [
+      'https://twitter.com/PayYoYo',
+      'https://linkedin.com/company/payyoyo',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0123',
+      contactType: 'customer service',
+      areaServed: 'CA',
+      availableLanguage: 'English',
+    },
+  }
+
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <title>PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually</title>
-        <meta name="description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually, featuring automatic card selection, zero balance.archive, and merchant-favored redemption." />
-        <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Toronto" />
-        <meta name="geo.position" content="43.6532;-79.3832" />
-        <meta name="ICBM" content="43.6532, -79.3832" />
-        <meta name="keywords" content="AI payment wallet, GPS-triggered payments, gift card optimization, Apple Pay alternative, Google Pay competitor, merchant analytics, smart wallet, digital payments" />
-        <meta name="author" content="AydenAIT Solutions" />
-        <meta name="robots" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1E40AF" />
+        <meta name="msapplication-TileColor" content="#1E40AF" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://payyoyo.com/" />
-        <meta property="og:title" content="PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually" />
-        <meta property="og:description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics." />
-        <meta property="og:image" content="https://payyoyo.com/og-image.jpg" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://payyoyo.com/" />
-        <meta property="twitter:title" content="PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually" />
-        <meta property="twitter:description" content="AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics." />
-
-        {/* Local SEO Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "Organization",
-                  "@id": "https://payyoyo.com/#organization",
-                  "name": "PayYoYo",
-                  "alternateName": "PayYoYo AI Payments",
-                  "description": "AI-powered autonomous payment platform revolutionizing payments with machine learning optimization",
-                  "url": "https://payyoyo.com",
-                  "logo": "https://payyoyo.com/logo.png",
-                  "founder": "AydenAIT Solutions",
-                  "foundingDate": "2025",
-                  "foundingLocation": {
-                    "@type": "Place",
-                    "address": {
-                      "@type": "PostalAddress",
-                      "addressLocality": "Toronto",
-                      "addressRegion": "ON",
-                      "addressCountry": "CA"
-                    }
-                  },
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Toronto",
-                    "addressRegion": "ON",
-                    "addressCountry": "CA"
-                  },
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+1-416-XXX-XXXX",
-                    "contactType": "customer service",
-                    "availableLanguage": "English"
-                  },
-                  "sameAs": [
-                    "https://twitter.com/payyoyoapp",
-                    "https://linkedin.com/company/payyoyo"
-                  ],
-                  "areaServed": [
-                    {
-                      "@type": "Country",
-                      "name": "Canada"
-                    },
-                    {
-                      "@type": "Place",
-                      "name": "Toronto"
-                    }
-                  ]
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://payyoyo.com/#website",
-                  "url": "https://payyoyo.com",
-                  "name": "PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually",
-                  "description": "AI-powered gift card payment wallet like Apple Pay & Google Pay. GPS-triggered smart payments save $636 annually with automatic card selection and merchant analytics.",
-                  "publisher": {
-                    "@id": "https://payyoyo.com/#organization"
-                  },
-                  "potentialAction": {
-                    "@type": "SearchAction",
-                    "target": "https://payyoyo.com/search?q={search_term_string}",
-                    "query-input": "required name=search_term_string"
-                  }
-                },
-                {
-                  "@type": "WebPage",
-                  "@id": "https://payyoyo.com/#webpage",
-                  "url": "https://payyoyo.com",
-                  "name": "PayYoYo - GPS-Enhanced AI Payment Wallet | Save $636 Annually",
-                  "isPartOf": {
-                    "@id": "https://payyoyo.com/#website"
-                  },
-                  "about": {
-                    "@id": "https://payyoyo.com/#organization"
-                  }
-                }
-              ]
-            })
+            __html: JSON.stringify(organizationSchema),
           }}
         />
       </head>
-      <body className={inter.className}>
-        {children}
+
+      <body className={`${inter.className} text-gray-900 antialiased`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          Skip to main content
+        </a>
+
+        <LazyMotion features={domAnimation}>
+          {children}
+        </LazyMotion>
         <CookieConsent />
+
+        <Script strategy="afterInteractive" id="performance-monitoring">
+          {`
+            if ('performance' in window && 'PerformanceObserver' in window) {
+              try {
+                const observer = new PerformanceObserver((list) => {
+                  for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                      if (window.gtag) {
+                        window.gtag('event', 'lcp', {
+                          value: Math.round(entry.startTime),
+                        });
+                      }
+                    }
+                  }
+                });
+                observer.observe({ entryTypes: ['largest-contentful-paint'] });
+              } catch (e) {
+                console.warn('Performance observer not supported');
+              }
+            }
+          `}
+        </Script>
       </body>
     </html>
   )

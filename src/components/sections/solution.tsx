@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { SavingsCalculator } from '@/components/ui/savings-calculator';
 import React from 'react';
 
 // TypeScript interfaces for better type safety
@@ -455,7 +456,7 @@ export function Solution() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 md:p-12 text-center text-white"
+            className="bg-gradient-to-r from-[#1E40AF] to-[#3B82F6] rounded-2xl p-8 md:p-12 text-center text-white mb-16"
           >
             <h4 className="text-2xl font-bold mb-4">Our Mission</h4>
             <p className="text-xl opacity-90 mb-6">
@@ -479,6 +480,22 @@ export function Solution() {
                 <p className="text-sm opacity-75">Card Utilization Rate</p>
               </div>
             </div>
+          </motion.div>
+
+          {/* Interactive Download Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              🏆 Ready to Stop Wasting Money on Gift Cards?
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Calculate your potential savings and download PayYoyo today
+            </p>
+            <SavingsCalculator />
           </motion.div>
         </section>
 

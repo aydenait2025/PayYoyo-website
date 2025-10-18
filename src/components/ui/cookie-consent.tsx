@@ -11,7 +11,9 @@ export function CookieConsent() {
   useEffect(() => {
     // Check if user has already made a choice
     const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
+    if (process.env.NODE_ENV === 'development') {
+      acceptCookies(); // Automatically accept cookies in development
+    } else if (!consent) {
       setIsVisible(true);
     } else {
       setHasConsented(true);
@@ -65,12 +67,14 @@ export function CookieConsent() {
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our{' '}
-                  <button
-                    onClick={showSettings}
+                  <a
+                    href="/cookie-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-[#1E40AF] hover:text-[#3B82F6] underline font-medium"
                   >
                     Cookie Policy
-                  </button>
+                  </a>
                   .
                 </p>
               </div>

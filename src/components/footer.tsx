@@ -1,15 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect } from 'react';
 
 export function Footer() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
@@ -98,15 +91,15 @@ export function Footer() {
                         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#1E40AF] transition-all duration-300 group-hover:w-full"></span>
                       </motion.a>
                     ) : item.id ? (
-                      <motion.button
-                        onClick={() => scrollToSection(item.id!)}
-                        className="group relative text-left text-gray-600 hover:text-[#1E40AF] cursor-pointer transition-all duration-300 text-sm"
+                      <motion.a
+                        href={`/#${item.id}`}
+                        className="group relative text-left text-gray-600 hover:text-[#1E40AF] transition-all duration-300 text-sm"
                         whileHover={{ scale: 1.05, x: 2 }}
                         transition={{ duration: 0.2 }}
                       >
                         <span className="relative z-10">{item.name}</span>
                         <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#1E40AF] transition-all duration-300 group-hover:w-full"></span>
-                      </motion.button>
+                      </motion.a>
                     ) : (
                       <span className="text-gray-400 text-left cursor-default text-sm opacity-60">
                         {item.name}

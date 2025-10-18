@@ -75,21 +75,17 @@ export function VideoDemo({ onClose }: VideoDemoProps) {
 
       {/* Video placeholder with improved accessibility */}
       <section className="relative bg-gray-100 rounded-lg overflow-hidden mb-6" aria-labelledby="video-placeholder">
-        <div className="aspect-video bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-          <div className="text-center">
-            <div
-              className={`w-24 h-24 ${COLORS.primary} rounded-full flex items-center justify-center mb-4 mx-auto`}
-              aria-hidden="true"
-            >
-              <PlayIcon className="w-12 h-12 text-white" />
-            </div>
-            <p className={`${COLORS.textSecondary} font-medium`} aria-live="polite">
-              {MESSAGES.comingSoon}
-            </p>
-            <p className={`text-sm ${COLORS.textMuted} mt-1`}>
-              {MESSAGES.buildingAmazing}
-            </p>
-          </div>
+        <div className="aspect-video">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="PayYoYo Demo Video Placeholder"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded-lg"
+          ></iframe>
         </div>
       </section>
 
